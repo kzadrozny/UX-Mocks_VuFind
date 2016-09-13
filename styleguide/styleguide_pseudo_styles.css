@@ -1,0 +1,28 @@
+.btn-default.pseudo-class-hover,
+.btn-default.pseudo-class-focus,
+.btn-default.pseudo-class-active {
+  background-color: #806362;
+}
+
+input.pseudo-class-checked + label {
+  background-color: #dfe0d5;
+  color: #616530;
+  padding: 10px 0;
+  margin: 0;
+}
+
+input.pseudo-class-checked + label:before {
+  content: "✓ ";
+  font-size: 5em;
+  position: absolute;
+  right: 50px;
+  z-index: 10;
+}
+
+input.pseudo-class-checked + label .check {
+  visibility: visible;
+}
+
+input.checkbox.pseudo-class-checked + label:before {
+  content: "";
+}

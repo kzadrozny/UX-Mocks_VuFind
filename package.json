@@ -6,11 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzadrozny/VuFind.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kzadrozny/VuFind/issues"
+  },
+  "homepage": "https://github.com/kzadrozny/VuFind#readme",
   "devDependencies": {
     "browser-sync": "^2.15.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "sc5-styleguide": "^1.1.3"
   }
 }
