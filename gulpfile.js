@@ -1,8 +1,6 @@
 var gulp = require('gulp');
-var styleguide = require('sc5-styleguide');
 var sass = require('gulp-sass'); // Requires the gulp-sass plugin
 var browserSync = require('browser-sync').create();
-var outputPath = 'styleguide';
 
 
 gulp.task('sass', function(){
@@ -14,32 +12,10 @@ gulp.task('sass', function(){
     }))
 });
 
-gulp.task('styleguide:generate', function() {
-  return gulp.src('src/scss/**/*.scss')
-    .pipe(styleguide.generate({
-        title: 'SunnyDale',
-        server: true,
-        rootPath: outputPath,
-        overviewPath: 'README.md'
-      }))
-    .pipe(gulp.dest(outputPath));
-});
- 
-gulp.task('styleguide:applystyles', function() {
-  return gulp.src('src/scss/**/*.scss')
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(styleguide.applyStyles())
-    .pipe(gulp.dest(outputPath));
-});
-
-gulp.task('watch', ['browserSync', 'sass', 'styleguide'], function(){
-  gulp.watch('src/scss/**/*.scss', ['sass', 'styleguide']);
+gulp.task('watch', ['browserSync', 'sass'], function(){
+  gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('/*.html', browserSync.reload);
 })
-
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 gulp.task('browserSync', function() {
   browserSync.init({

@@ -9,7 +9,8 @@
  */
 .alert-list {
   padding: 5px;
-  margin: 10px 0; }
+  margin: 10px 0;
+  border: 1px solid; }
 
 .ill-item {
   color: #9A5324;
