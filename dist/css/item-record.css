@@ -108,7 +108,7 @@ dl {
       .holidings-copy table tr:nth-child(even) {
         background-color: #eee; }
     .holidings-copy table td {
-      padding: 1em; }
+      padding: 0.8em; }
       .holidings-copy table td:last-child {
         width: 35%;
         vertical-align: top; }
