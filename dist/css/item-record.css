@@ -1,0 +1,150 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *		@include respond-to(medium) { ... }
+ *		@include respond-to(large) { ... }
+ */
+a {
+  color: #437e9b; }
+  a:hover {
+    color: #47B5FF; }
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0; }
+
+h5 {
+  font-size: 1.7em;
+  color: #670000; }
+  h5 + h6 {
+    margin-top: 0; }
+
+h6 {
+  font-size: 1.3em;
+  margin: 1.3em 0 0.5em 0;
+  border-bottom: 1px solid #eee; }
+
+dl {
+  font-size: 1.1em;
+  padding-top: 1em;
+  color: #5F574F; }
+  dl dt, dl dd {
+    line-height: 2em; }
+
+.holdings-cover {
+  padding-left: 0;
+  padding-bottom: 1em; }
+
+.holdings-availpanel {
+  padding: 1.5em; }
+  .holdings-availpanel .availpanel-heading {
+    font-size: 1.5em;
+    font-weight: 600; }
+    .holdings-availpanel .availpanel-heading.yes {
+      color: #616530; }
+    .holdings-availpanel .availpanel-heading.no {
+      color: #7c0000; }
+  .holdings-availpanel .label {
+    color: #5F574F;
+    font-size: 1.5em;
+    font-weight: 300;
+    float: left;
+    padding: 0;
+    margin: 0.5em 1.5em 0.5em 0; }
+    .holdings-availpanel .label .value {
+      font-weight: 600; }
+
+.includes {
+  font-style: italic; }
+
+.btn-request, .btn-browse {
+  background-color: #e7e8d9;
+  border-color: #ddd;
+  margin: 1em 0; }
+  .btn-request + .btn-request, .btn-browse + .btn-request, .btn-request + .btn-browse, .btn-browse + .btn-browse {
+    margin-left: 1em; }
+
+.btn-browse {
+  background-color: #e3dfd5; }
+
+.holdings-locpanel {
+  padding: 0;
+  border: 1px solid #ddd;
+  margin-bottom: 1em; }
+  .holdings-locpanel .locpanel-heading {
+    background-color: #767676;
+    color: #fbfbf9;
+    padding: 1em;
+    margin-bottom: 0; }
+    .holdings-locpanel .locpanel-heading h3 {
+      margin: 0 0 0.25em; }
+    .holdings-locpanel .locpanel-heading a {
+      color: #fff;
+      text-decoration: underline; }
+
+#e-links .locpanel-heading {
+  background-color: #8A9045; }
+
+.holidings-copy {
+  padding: 1em 0 0;
+  line-height: 1.5em; }
+  .holidings-copy .notes {
+    line-height: 0.2em;
+    font-style: italic; }
+  .holidings-copy table {
+    background: transparent;
+    width: 100%;
+    box-shadow: 0px 5px 5px #ddd; }
+    .holidings-copy table th {
+      font-weight: 300;
+      padding-left: 1em;
+      padding-bottom: 0.3em; }
+    .holidings-copy table tr {
+      line-height: 1.5em; }
+      .holidings-copy table tr:first-child td {
+        padding-top: 0; }
+      .holidings-copy table tr:nth-child(even) {
+        background-color: #eee; }
+    .holidings-copy table td {
+      padding: 1em; }
+      .holidings-copy table td:last-child {
+        width: 35%;
+        vertical-align: top; }
+    .holidings-copy table + table {
+      border-top: 1px solid #ddd; }
+      .holidings-copy table + table th {
+        padding-top: 1em; }
+    .holidings-copy table .call-header {
+      border-bottom: 1px solid #ddd; }
+
+.dl-horizontal dt {
+  width: 150px; }
+
+.dl-horizontal dd {
+  margin-left: 160px; }
+
+.text-success, .text-danger {
+  font-size: 1.2em; }
+
+a.eLink.text-success.external {
+  font-size: 1.1em; }
+
+.explore-list {
+  padding-left: 0;
+  list-style: none; }
+  .explore-list li {
+    margin: 0.7em 0; }
+    .explore-list li:first-child {
+      margin-top: 0; }
+
+.service {
+  margin: 0; }
+
+a.bibToggle {
+  margin-top: 0;
+  background-color: #f3f2ee; }
+
+.template-name-view span {
+  font-weight: inherit; }
