@@ -12,16 +12,23 @@
   margin: 10px 0;
   border: 1px solid; }
 
-.ill-item {
+.item-type {
   color: #9A5324;
   font-weight: 600; }
 
+.due-date {
+  font-weight: 600;
+  color: #800000;
+  font-size: 1.1em; }
+
 a.title {
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 1.1em; }
 
 [id^="record"] {
   padding-top: 7px;
-  padding-bottom: 7px; }
+  padding-bottom: 7px;
+  line-height: 1.5em; }
   [id^="record"]:nth-of-type(odd) {
     background-color: #fff; }
     @media (min-width: 48em) {
