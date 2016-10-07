@@ -15,6 +15,11 @@ h1 {
   font-size: 2em;
   margin-bottom: 0; }
 
+h2 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0; }
+
 h5 {
   font-size: 1.7em;
   color: #670000; }
@@ -74,18 +79,17 @@ dl {
   border: 1px solid #ddd;
   margin-bottom: 1em; }
   .holdings-locpanel .locpanel-heading {
-    background-color: #767676;
-    color: #fbfbf9;
+    background: #e8e7df;
     padding: 1em;
     margin-bottom: 0; }
     .holdings-locpanel .locpanel-heading h3 {
       margin: 0 0 0.25em; }
     .holdings-locpanel .locpanel-heading a {
-      color: #fff;
       text-decoration: underline; }
 
-#e-links .locpanel-heading {
-  background-color: #8A9045; }
+.holdings-unit {
+  border-bottom: none;
+  border-top: 1px dashed #ddd; }
 
 .holidings-copy {
   padding: 1em 0 0;
@@ -126,10 +130,12 @@ dl {
   margin-left: 160px; }
 
 .text-success, .text-danger {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  display: block; }
 
 a.eLink.text-success.external {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  padding-top: 7px; }
 
 .explore-list {
   padding-left: 0;
@@ -139,12 +145,46 @@ a.eLink.text-success.external {
     .explore-list li:first-child {
       margin-top: 0; }
 
-.service {
+a.service.external, a.service {
+  padding-right: 15px;
+  white-space: nowrap;
   margin: 0; }
 
 a.bibToggle {
-  margin-top: 0;
-  background-color: #f3f2ee; }
+  margin-top: 0; }
 
 .template-name-view span {
   font-weight: inherit; }
+
+/***** TABLES ******/
+table {
+  table-layout: auto !important;
+  word-wrap: normal;
+  white-space: nowrap; }
+
+tr[typeof="Offer"] th, #holdings-tab .holdings-table th {
+  width: auto; }
+
+#holdings-tab .holdings-table td {
+  padding-bottom: 10px; }
+
+/* responsive table */
+@media screen and (max-width: 480px) {
+  table, tbody {
+    display: block;
+    width: 100%; }
+  table tr, table th, table td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+    width: 100%; }
+  .holdings-table tr {
+    padding-bottom: 11px;
+    margin-bottom: 11px; }
+  tr[typeof="Offer"] th,
+  #holdings-tab .holdings-table th,
+  div[resource="#record"] .table > tbody > tr > th,
+  div[resource="#record"] .table > tbody > tr > td {
+    width: 100%;
+    max-width: 100%; } }

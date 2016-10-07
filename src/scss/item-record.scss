@@ -12,6 +12,12 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0;
+}
+
 h5 {
   font-size: 1.7em;
   color: #670000;
@@ -90,24 +96,21 @@ dl {
   border: 1px solid #ddd;
   margin-bottom: 1em;
   .locpanel-heading {
-    background-color: #767676; //#5F574F
-    color: #fbfbf9;
+    background: #e8e7df;
     padding: 1em;
     margin-bottom: 0;
     h3 {
       margin: 0 0 0.25em;
     }
     a {
-      color: #fff;
       text-decoration: underline;
     }
   }
 }
 
-#e-links {
-  .locpanel-heading {
-    background-color: #8A9045;
-  }
+.holdings-unit {
+  border-bottom: none;
+  border-top: 1px dashed #ddd;
 }
 
 .holidings-copy {
@@ -167,10 +170,12 @@ dl {
 
 .text-success, .text-danger {
   font-size: 1.2em;
+  display: block;
 }
 
 a.eLink.text-success.external {
   font-size: 1.1em;
+  padding-top: 7px;
 }
 
 .explore-list {
@@ -184,17 +189,68 @@ a.eLink.text-success.external {
   }
 }
 
-.service { //custom override
+a.service.external, a.service {
+  padding-right: 15px;
+  white-space: nowrap;
   margin: 0;
 }
 
 a.bibToggle { //custom override
     margin-top: 0;
-    background-color: #f3f2ee;
 }
 
 .template-name-view span { //custom override
     font-weight: inherit;
+}
+
+/***** TABLES ******/
+
+table {
+  table-layout: auto !important;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+tr[typeof="Offer"] th, #holdings-tab .holdings-table th {
+  width: auto;
+}
+
+#holdings-tab .holdings-table td {
+  padding-bottom: 10px;
+}
+
+// tr[typeof="Offer"]:nth-child(even) {
+//     background-color: #eee;
+// }
+
+/* responsive table */
+@media screen and (max-width: 480px) {
+  table, tbody {
+      display: block;
+      width: 100%;
+  }
+
+  table {
+    tr, th, td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+      width: 100%;
+    }
+  }
+  .holdings-table tr {
+      padding-bottom: 11px;
+      margin-bottom: 11px;
+  }
+
+  tr[typeof="Offer"] th,
+  #holdings-tab .holdings-table th,
+  div[resource="#record"] .table > tbody > tr > th,
+  div[resource="#record"] .table > tbody > tr > td {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 
