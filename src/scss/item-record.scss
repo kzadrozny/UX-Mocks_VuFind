@@ -17,10 +17,15 @@ h2 {
   line-height: 17px;
   margin: 0;
 }
+h3  {
+  font-size: 1.3em;
+}
 
 h5 {
-  font-size: 1.7em;
+  font-size: 1.2em;
   color: #670000;
+  margin: 1em 0 0 0.35em;
+  font-style: italic;
   & + h6 {
     margin-top: 0;
   }
@@ -111,51 +116,8 @@ dl {
 .holdings-unit {
   border-bottom: none;
   border-top: 1px dashed #ddd;
-}
-
-.holidings-copy {
-  padding: 1em 0 0; 
-  line-height: 1.5em;
-  .notes {
-    line-height: 0.2em;
-    font-style: italic;
-  }
-  table {
-    background: transparent;
-    width: 100%;
-    box-shadow: 0px 5px 5px #ddd;
-    & th {
-      font-weight: 300;
-      padding-left: 1em;
-      padding-bottom: 0.3em;
-    }
-    & tr {
-      line-height: 1.5em;
-      &:first-child {
-        & td {
-          padding-top: 0;
-        }      
-      }
-      &:nth-child(even) {
-        background-color: #eee;
-      }
-    }
-    & td {
-      padding: 0.8em;
-      &:last-child {
-        width:  35%;
-        vertical-align: top;
-      }
-    }
-    & + table { //sibling tables
-      border-top: 1px solid #ddd;
-      th {
-        padding-top: 1em;
-      }
-    }
-    .call-header {
-      border-bottom: 1px solid #ddd;
-    }
+  &:nth-child(even) { //compiled override
+    background: none;
   }
 }
 
@@ -171,6 +133,20 @@ dl {
 .text-success, .text-danger {
   font-size: 1.2em;
   display: block;
+}
+
+a.summaryToggle, a.itemsToggle {
+  font-size: 1.05em;
+  margin-top: 0.25em;
+}
+
+a.itemsToggle {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 1px dashed;
+    @include respond-to(small) {
+      margin-left: -155px;
+    }
 }
 
 a.eLink.text-success.external {
@@ -205,23 +181,80 @@ a.bibToggle { //custom override
 
 /***** TABLES ******/
 
+
 table {
+  background: transparent;
+  width: 100%;
+  padding: 1em 0 0; 
+  line-height: 1.5em;
   table-layout: auto !important;
   word-wrap: normal;
-  white-space: nowrap;
+  .notes {
+    line-height: 0.2em;
+    font-style: italic;
+  }
+  & th {
+    padding-left: 1em;
+    padding-bottom: 0.3em;
+    width: 155px;
+  }
+  & tr {
+    line-height: 1.5em;
+    &:first-child {
+      & td {
+        padding-top: 0;
+      }
+    }
+    &[typeof="Offer"] {
+      th {
+        width: 10%;
+        white-space: nowrap;
+      }
+      &:nth-child(even) {
+        background-color: #eee;
+      }
+    }
+  }
+  & td {
+    padding: 0.8em;    
+    &:last-child {
+      vertical-align: top;
+    }
+  }
+  & + table { //sibling tables
+    border-top: 1px solid #ddd;
+    th {
+      padding-top: 1em!important;
+    }
+  }
+  .call-header {
+    border-bottom: 1px solid #ddd;
+  }
 }
 
-tr[typeof="Offer"] th, #holdings-tab .holdings-table th {
-  width: auto;
+table.holdins-unit tr.section div {
+  line-height: 1.55em;
 }
 
-#holdings-tab .holdings-table td {
-  padding-bottom: 10px;
+.libraryhas {
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
-// tr[typeof="Offer"]:nth-child(even) {
-//     background-color: #eee;
-// }
+#holdings-tab table tr  { //compiled override
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#holdings-tab table th, #holdings-tab table td { //compiled override
+  padding-top: 0;
+  padding-bottom: 0;
+  @include respond-to(small) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
 
 /* responsive table */
 @media screen and (max-width: 480px) {
@@ -238,10 +271,6 @@ tr[typeof="Offer"] th, #holdings-tab .holdings-table th {
       white-space: normal;
       width: 100%;
     }
-  }
-  .holdings-table tr {
-      padding-bottom: 11px;
-      margin-bottom: 11px;
   }
 
   tr[typeof="Offer"] th,
