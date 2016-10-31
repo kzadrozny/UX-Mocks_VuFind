@@ -108,6 +108,11 @@ dl {
   font-size: 1.2em;
   display: block; }
 
+.item-loc {
+  display: block;
+  font-style: italic;
+  line-height: 2em; }
+
 a.summaryToggle, a.itemsToggle {
   font-size: 1.05em;
   margin-top: 0.25em; }
