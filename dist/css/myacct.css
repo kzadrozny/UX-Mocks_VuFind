@@ -7,6 +7,9 @@
  *		@include respond-to(medium) { ... }
  *		@include respond-to(large) { ... }
  */
+.alert {
+  margin: 10px 0; }
+
 .alert-list {
   padding: 5px;
   margin: 10px 0;
@@ -37,6 +40,10 @@ a.title {
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
   background-color: #806362; }
+
+.toolbar {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px; }
 
 input[type=checkbox] {
   display: none; }
