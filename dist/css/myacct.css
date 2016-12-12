@@ -44,6 +44,74 @@ a.title {
   border-bottom: 1px solid #eee;
   padding-bottom: 10px; }
 
+@media (max-width: 34em) {
+  table.table-striped, .table-striped > tbody {
+    display: block;
+    width: 100%; }
+    table.table-striped thead, table.table-striped tr, table.table-striped th, table.table-striped td, .table-striped > tbody thead, .table-striped > tbody tr, .table-striped > tbody th, .table-striped > tbody td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal; }
+    table.table-striped tr, .table-striped > tbody tr {
+      border-bottom: 1px solid #eee; }
+    table.table-striped td, .table-striped > tbody td {
+      border: none;
+      margin-bottom: 6px;
+      color: #444; } }
+
+.template-dir-myresearch.template-name-checkedout table.table th:nth-child(3) {
+  width: 12%; }
+
+.table-striped > tbody > tr:nth-child(even) {
+  background-color: #eee; }
+
+table.fine-table td {
+  width: 14%; }
+
+table.fine-table td:nth-of-type(1) {
+  width: 30%; }
+
+table.fine-table td:nth-of-type(2) {
+  white-space: nowrap; }
+
+table.fine-table tbody tr:last-child {
+  font-weight: bold;
+  border-top: 3px solid #ddd; }
+  table.fine-table tbody tr:last-child td {
+    background-color: #fcf8e3; }
+
+@media (max-width: 544px) {
+  table.fine-table thead {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+  table.fine-table tbody td:nth-of-type(1) {
+    width: 100%; }
+    table.fine-table tbody td:nth-of-type(1):before {
+      content: "Title: ";
+      font-weight: bold; }
+  table.fine-table tbody td:nth-of-type(2):before {
+    content: "Bill Date: ";
+    font-weight: bold; }
+  table.fine-table tbody td:nth-of-type(3):before {
+    content: "Checked Out: ";
+    font-weight: bold; }
+  table.fine-table tbody td:nth-of-type(4):before {
+    content: "Fine: ";
+    font-weight: bold; }
+  table.fine-table tbody td:nth-of-type(5):before {
+    content: "Fee: ";
+    font-weight: bold; }
+  table.fine-table tbody td:nth-of-type(6):before {
+    content: "Balance: ";
+    font-weight: bold; } }
+
 input[type="checkbox"] {
   margin: 1em 0;
   cursor: pointer;
