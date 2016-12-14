@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta name="google-site-verification" content="MVKdj1ykLrwrN01_2Y85qg78KiUxrdRYTSFc6TyBkNY"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="Generator" content="VuFind 2.3">    <title>Mansueto Requests</title>
+<meta name="Generator" content="VuFind 2.3">    <title>Checked Out Items</title>
 <link href="https://catalog.lib.uchicago.edu/vufind/themes/phoenix/css/compiled.css" media="all" rel="stylesheet" type="text/css">
 <link href="https://catalog.lib.uchicago.edu/vufind/themes/bootstrap3/css/vendor/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
 <link href="https://catalog.lib.uchicago.edu/vufind/themes/bootstrap3/css/vendor/bootstrap-slider.css" media="all" rel="stylesheet" type="text/css">
@@ -172,72 +172,105 @@
         
 <div class="row">
   <div class="col-sm-9">
-    <h2>Mansueto Requests</h2>
-   
-
+    <h2>Checked Out Items <small>(6)</small></h2>
+    <div class="alert alert-danger" role="alert" style="padding: 7px 15px;">You have item(s) due soon.</div>
+                  <div class="alert alert-warning" role="alert" style="">Please do not click renew twice—renewals can take up to a minute.<br/>For help, <a href="https://www.lib.uchicago.edu/about/directory/?view=department&query=circulation">Call us</a> or use our <a href="https://www.lib.uchicago.edu/borrow/borrowing/contact-circulation/">online form</a> and Library staff will help you.</div>
       <form name="renewals" action="/vufind/MyResearch/Home" method="post" id="renewals">
+        <div class="toolbar">
+          <input type="submit" class="btn btn-default" name="renewSelected" value="Renew Selected" />
+          <input type="submit" class="btn btn-default" name="renewAll" value="Renew All" />
+
+          <input type="submit" class="btn btn-default" name="print" value="Print" />
+
+        <span class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Export   <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">CSV</a></li>
+            <li><a href="#">EndNoteWeb</a></li>
+            <li><a href="#">EndNote/Zotero</a></li>
+            <li><a href="#">BibTex</a></li>
+          </ul>
+        </span>
+
+          <span class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort By: <strong>On Hold Expiration Date</strong> <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Title</a></li>
+            <li><a href="#">Author</a></li>
+            <li><a href="#">Call Number</a></li>
+            <li><a href="#">Item Status</a></li>
+            <li><a href="#">On Hold Expiration Date</a></li>
+            <li><a href="#">Request Expiration Date</a></li>
+            <li><a href="#">Loan Type/Shelving Location</a></li>
+          </ul>
+        </span>
+
+        </div>
+
+            <div id="record1313318" class="row result">
+              <div class="col-xs-1">
+                <input class="checkbox-select-item" type="checkbox" name="renewSelectedIDS[]" value="0" id="checkbox_0">
+                <input type="hidden" name="selectAllIDS[]" value="0">
+                <input type="hidden" name="renewAllIDS[]" value="0">
+              </div>
+            <div class="col-sm-2 hidden-xs text-center">
+            <img alt="Cover Image" class="recordcover" src="https://vufind.org/demo/Cover/Show?author=Derrida%2C+Jacques.&callnumber=AC25+.D45513&size=large&title=Dissemination&oclc=777883328" width="80%" height="auto">
+            </div>
+
+            <div class="col-sm-5 col-xs-12">
+              <a href="/vufind/Record/4130680" class="title">False prophet : fieldnotes from the punk underground /</a><br/>
+              Ari Lennox<br/>
+            Mansueto<br/>
+            <strong>On Hold Expiration Date:</strong> 09-23-2016 2:30pm
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            DC801.L586W48 1996<br>
+            <strong>Barcode:</strong> 8513330<br/>
+            <strong>Item Status:</strong> On Hold<br/>
+            <strong>Request Expiration Date:</strong>  09-23-2016     
+          </div>
 
 
-   <form action="/vufind/MyResearch/Storagerequest" method="post" name="mansuetoRequests">
-            <p>
-            <span id="asrselectallornone"></span>
-          <button class="request" name="action" type="submit" value="remove">Remove selected items</button>
-            </p>
-  
-        <table class="table table-striped datagrid">
-            <thead>
-            <tr>
-            <th>
-              </th><th>Title</th>
-            <th>Call #</th>
-            <th>Copy</th>
-            </tr>
-            </thead>
+        </div>  
 
-            <tbody>
-              <tr>
-                <td><input name="remove[]" type="checkbox" value="5053685|64348256"></td>
-                                <td><str>False prophet : fieldnotes from the punk underground /</str></td>
-            <td>DC801.L586W48 1996</td>
-            <td>c.1</td>
-            </tr>
-                            <tr>
-                        <td><input name="remove[]" type="checkbox" value="6376885|54648374"></td>
-                                        <td><str>Punk rock Xmas</str></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                    </tbody></table>
-  
-                      <input name="barcode[]" type="hidden" value="64348256">
-              <input name="bib[]" type="hidden" value="5053685">
-                        <input name="barcode[]" type="hidden" value="54648374">
-              <input name="bib[]" type="hidden" value="6376885">
-          
-          <label for="asrpickuplocation">Select Pickup Location</label>
-            <select id="asrpickuplocation" name="location">
-              <option value="">Select...</option>
-              <option value="MANSUETO">Mansueto within 15 min during open hours</option>
-              <option value="CRERAR">Crerar Lib, within 1 business day</option>
-              <option value="LAW">D'Angelo Law Lib, within 1 business day</option>
-              <option value="ECKHART">Eckhart Lib, within 1 business day</option>
-              <option value="SSAd">Soc Serv Admin Lib within 1 business day</option>
-          </select>
+         <div id="record131" class="row result">
+              <div class="col-xs-1">
+                <input class="checkbox-select-item" type="checkbox" name="renewSelectedIDS[]" value="0" id="checkbox_0">
+                <input type="hidden" name="selectAllIDS[]" value="0">
+                <input type="hidden" name="renewAllIDS[]" value="0">
+              </div>
+            <div class="col-sm-2 hidden-xs text-center">
+            <img alt="Cover Image" class="recordcover" src="https://vufind.org/demo/Cover/Show?author=Derrida%2C+Jacques.&callnumber=AC25+.D45513&size=large&title=Dissemination&oclc=777883328" width="80%" height="auto">
+            </div>
 
-            <p style="text-align: right;">  
-          <button class="request" name="action" type="submit" value="request">Request all items</button>
-            </p>
-      </form>
+            <div class="col-sm-5 col-xs-12">
+              <a href="/vufind/Record/4130680" class="title">La guerre entre amis; choses vues, par André Foucault.</a><br/>
+              by: Foucault, André.<br/>
+            Interlibrary Loan<br/>
+             <strong>On Hold Expiration Date:</strong> 09-30-2016
+          </div>
+          <div class="col-sm-4 col-xs-12">
+              AP20.O3 c.1 no.144 p.303-381<br>
+            <strong>Barcode:</strong> 3834910<br>
+            <strong>Item Status:</strong> LOANED<br/>
+            <strong>Request Expiration Date:</strong>  09-01-2016
                         
+          </div> 
+        </div>
 
+
+          
+      </form>
       <hr>
     </div>
 
   <div class="sidebar col-sm-3 hidden-print">
     <h4>My Account</h4>
 <ul class="list-group">
-        <a href="vufind-checkout.html" class="list-group-item">Checked Out Items <span class="pull-right"><i class="fa fa-book"></i></span></a>
-    <a href="vufind-mansueto.html" class="list-group-item active">Mansueto Requests  <span class="pull-right"><i class="fa fa-cogs"></i></span>  </a>
+        <a href="vufind-checkout.html" class="list-group-item active">Checked Out Items <span class="pull-right"><i class="fa fa-book"></i></span></a>
+    <a href="/vufind/MyResearch/StorageRequest" class="list-group-item">Mansueto Requests  <span class="pull-right"><i class="fa fa-cogs"></i></span>  </a>
     <a href="vufind-requested.html" class="list-group-item">Requested Items  <span class="pull-right"><i class="fa fa-flag"></i></span>  </a>
     <a href="vufind-fines.html" class="list-group-item">Fines  <span class="pull-right"><i class="fa fa-usd"></i></span>   </a>
     <a href="/vufind/MyResearch/Profile" class="list-group-item">Profile  <span class="pull-right"><i class="fa fa-user"></i></span>   </a>
