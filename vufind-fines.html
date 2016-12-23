@@ -168,6 +168,8 @@
       <div id="content" class="container">
         <div class="col-sm-9">
   <h2>Your Fines</h2>
+
+    <div class="alert alert-info" role="alert" style="">Fines and loan period information can be found at <a href="https://www.lib.uchicago.edu/borrow/borrowing/due-dates-and-loan-periods/">Due Dates &amp; Loan Periods</a>.</div>
   
 <!-- START ** Customizations for Production ** -->
   <form name="fines" action="/" method="post" id="renewals"> <!-- ** NEEDS REAL FORM INFO ** -->
@@ -199,8 +201,8 @@
       <th>Due date</th>
       <th>Return Date</th>
       <th>Bill Date</th>
-      <th>Fine</th>
-      <th>Fee</th>
+      <th>Fee Type</th>
+      <th>Fine Amount</th>
       <th>Balance</th>
     </tr>
   </thead>
@@ -209,9 +211,9 @@
       <tr>
         <td><a href="/demo/Record/262953">Women in uniform </a><br/>
             Mansueto, Recordings</td>
-        <td>10-26-2016</td>
-        <td>10-26-2016</td>
-        <td>11-09-2016</td>
+        <td>10-26-2016 23:59:00</td>
+        <td>10-26-2016 12:15:20</td>
+        <td>11-09-2016 01:05:10</td>
         <td>Overdue</td>
         <td>$16.50</td>
         <td>$8.25</td>
@@ -220,54 +222,54 @@
         <td>
         <a href="/demo/Record/200467">The gifts they bring;</a><br/>
             Regenstein, Bookstacks</td>
-        <td>11-20-2016</td>
-        <td>10-26-2016</td>
-        <td>12-04-2016</td>
+        <td>11-20-2016 12:15:20</td>
+        <td>10-26-2016 23:59:00</td>
+        <td>12-04-2016 01:05:10</td>
         <td>Overdue Fine</td>
         <td>$4.00</td>
         <td>$2.00</td>
       </tr>
                 <tr>
         <td><a href="/demo/Record/1192510">The Cloathiers answers to, and reasons against, the Hamburgh-Company.</a><br/>Interlibrary Loan</td>
-        <td>11-20-2016</td>
-        <td>11-20-2016</td>
-        <td>12-04-2016</td>
+        <td>11-20-2016 01:05:10</td>
+        <td>11-20-2016 23:59:00</td>
+        <td>12-04-2016 12:15:20</td>
         <td>Overdue</td>
         <td>$4.00</td>
         <td>$2.00</td>
       </tr>
       <tr>
         <td><a href="/demo/Record/248570">The aesthetics of modernism </a></td>
-        <td>10-28-2016</td>
-        <td>11-20-2016</td>
-        <td>11-11-2016</td>
+        <td>10-28-2016 12:15:20</td>
+        <td>11-20-2016 01:05:10</td>
+        <td>11-11-2016 23:59:00</td>
         <td>Long Overdue</td>
         <td>$15.50</td>
         <td>$15.50</td>
       </tr>
       <tr>
         <td><a href="/demo/Record/729401">Protecting innovation and art while preventing piracy </a></td>
-        <td>11-18-2016</td>
-        <td>11-20-2016</td>
-        <td>12-02-2016</td>
+        <td>11-18-2016 23:59:00</td>
+        <td>11-20-2016 12:15:20</td>
+        <td>12-02-2016 01:05:10</td>
         <td>Overdue</td>
         <td>$5.00</td>
         <td>$2.50</td>
       </tr>
       <tr>
         <td><a href="/demo/Record/141044">Montesquieu;</a><br/>Regenstein, 1st Floor Reserve Desk</td>
-        <td>11-07-2016</td>
-        <td>11-20-2016</td>
-        <td>11-21-2016</td>
+        <td>11-07-2016 01:05:10</td>
+        <td>11-20-2016 12:15:20</td>
+        <td>11-21-2016 23:59:00</td>
         <td>Long Overdue</td>
         <td>$10.50</td>
         <td>$5.25</td>
       </tr>
       <tr>
         <td><a href="/demo/Record/1480956">Locally convex spaces </a><br/>Regenstein, 1st Floor Reserve Desk</td>
-        <td>11-06-2016</td>
-        <td>11-20-2016</td>
-        <td>11-20-2016</td>
+        <td>11-06-2016 23:59:00</td>
+        <td>11-20-2016 01:05:10</td>
+        <td>11-20-2016 12:15:20</td>
         <td>Long Overdue</td>
         <td>$11.00</td>
         <td>$5.50</td>
@@ -288,7 +290,6 @@
         <i class="fa fa-fw fa-usd" aria-hidden="true"></i> Fines      </a>
               <a href="/vufind/MyResearch/Profile" class="list-group-item">
         <i class="fa fa-fw fa-user" aria-hidden="true"></i> Profile      </a>
-                
         <a href="/vufind/MyResearch/Logout" class="list-group-item">
       <i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out    </a>
   </div>
@@ -299,17 +300,19 @@
         <i class="fa fa-fw fa-flag" aria-hidden="true"></i> Requested Items      </a>
 <!-- ** NEEDS REAL LINK **--> <a href="#" class="list-group-item">
         <i class="fa fa-fw fa-shopping-basket" aria-hidden="true"></i> Mansueto Cart      </a>
-<!-- ** NEEDS REAL LINK **--> <a href="#" class="list-group-item">
+<!-- ** CHECK LINK **--> <a href="https://requests.lib.uchicago.edu/illiad/illiad.dll" class="list-group-item">
         <i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i> Interlibrary Loan      </a>
-<!-- ** NEEDS REAL LINK **--> <a href="#" class="list-group-item">
+<a href="http://forms.lib.uchicago.edu/lib/aon/aeon.php" class="list-group-item">
       <i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Special Collections    </a>
+       <a href="https://www.lib.uchicago.edu/borrow/borrowing/my-accounts/" class="list-group-item">
+        <i class="fa fa-fw fa-question-circle-o" aria-hidden="true"></i> Account FAQ      </a>
   </div>
 
   <h4>Course Reserves</h4>
     <div class="list-group">
-<!-- ** NEEDS REAL LINK **--> <a href="#" class="list-group-item">
+<a href="https://chalk.uchicago.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" class="list-group-item">
         <i class="fa fa-fw fa-address-card" aria-hidden="true"></i> Chalk      </a>
-<!-- ** NEEDS REAL LINK **-->  <a href="#" class="list-group-item">
+<!-- ** CHECK LINK **-->  <a href="https://acadtech-res.uchicago.edu/canvas/whichlogin/" class="list-group-item">
       <i class="fa fa-fw fa-address-book-o" aria-hidden="true"></i> Canvas    </a>
   </div>
 

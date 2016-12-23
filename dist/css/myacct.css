@@ -126,10 +126,10 @@ a.title {
     content: "Bill Date: ";
     font-weight: bold; }
   .template-name-fines table tbody td:nth-of-type(5):before {
-    content: "Fine: ";
+    content: "Fee Type: ";
     font-weight: bold; }
   .template-name-fines table tbody td:nth-of-type(6):before {
-    content: "Fee: ";
+    content: "Fine Amount: ";
     font-weight: bold; }
   .template-name-fines table tbody td:nth-of-type(7):before {
     content: "Balance: ";
