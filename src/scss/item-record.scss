@@ -12,9 +12,26 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0;
+}
+h3  {
+  font-size: 1.3em;
+}
+
+h4 {
+  margin-left: 0.5em;
+  font-weight: 600;
+  color: #4c3b3a;
+}
+
 h5 {
-  font-size: 1.7em;
+  font-size: 1.2em;
   color: #670000;
+  margin: 1em 0 0 0.35em;
+  font-style: italic;
   & + h6 {
     margin-top: 0;
   }
@@ -90,69 +107,23 @@ dl {
   border: 1px solid #ddd;
   margin-bottom: 1em;
   .locpanel-heading {
-    background-color: #767676; //#5F574F
-    color: #fbfbf9;
+    background: #e8e7df;
     padding: 1em;
     margin-bottom: 0;
     h3 {
       margin: 0 0 0.25em;
     }
     a {
-      color: #fff;
       text-decoration: underline;
     }
   }
 }
 
-#e-links {
-  .locpanel-heading {
-    background-color: #8A9045;
-  }
-}
-
-.holidings-copy {
-  padding: 1em 0 0; 
-  line-height: 1.5em;
-  .notes {
-    line-height: 0.2em;
-    font-style: italic;
-  }
-  table {
-    background: transparent;
-    width: 100%;
-    box-shadow: 0px 5px 5px #ddd;
-    & th {
-      font-weight: 300;
-      padding-left: 1em;
-      padding-bottom: 0.3em;
-    }
-    & tr {
-      line-height: 1.5em;
-      &:first-child {
-        & td {
-          padding-top: 0;
-        }      
-      }
-      &:nth-child(even) {
-        background-color: #eee;
-      }
-    }
-    & td {
-      padding: 0.8em;
-      &:last-child {
-        width:  35%;
-        vertical-align: top;
-      }
-    }
-    & + table { //sibling tables
-      border-top: 1px solid #ddd;
-      th {
-        padding-top: 1em;
-      }
-    }
-    .call-header {
-      border-bottom: 1px solid #ddd;
-    }
+.holdings-unit {
+  border-bottom: none;
+  border-top: 1px dashed #ddd;
+  &:nth-child(even) { //compiled override
+    background: none;
   }
 }
 
@@ -167,10 +138,32 @@ dl {
 
 .text-success, .text-danger {
   font-size: 1.2em;
+  display: block;
+}
+
+.item-loc {
+  display: block;
+  font-style: italic;
+  line-height: 2em;
+}
+
+a.summaryToggle, a.itemsToggle {
+  font-size: 1.05em;
+  margin-top: 0.25em;
+}
+
+a.itemsToggle {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: 1px dashed;
+    @include respond-to(small) {
+      margin-left: -155px;
+    }
 }
 
 a.eLink.text-success.external {
   font-size: 1.1em;
+  padding-top: 7px;
 }
 
 .explore-list {
@@ -184,17 +177,121 @@ a.eLink.text-success.external {
   }
 }
 
-.service { //custom override
+a.service.external, a.service {
+  padding-right: 15px;
+  white-space: nowrap;
   margin: 0;
 }
 
 a.bibToggle { //custom override
     margin-top: 0;
-    background-color: #f3f2ee;
 }
 
 .template-name-view span { //custom override
     font-weight: inherit;
+}
+
+/***** TABLES ******/
+
+
+table {
+  background: transparent;
+  width: 100%;
+  padding: 1em 0 0; 
+  line-height: 1.5em;
+  table-layout: auto !important;
+  word-wrap: normal;
+  .notes {
+    line-height: 0.2em;
+    font-style: italic;
+  }
+  & th {
+    padding-left: 1em;
+    padding-bottom: 0.3em;
+    width: 155px;
+  }
+  & tr {
+    line-height: 1.5em;
+    // &:first-child {
+    //   & td {
+    //     padding-top: 0;
+    //   }
+    // }
+    &[typeof="Offer"] {
+      th {
+        width: 10%;
+        white-space: nowrap;
+      }
+      &:nth-child(even) {
+        background-color: #eee;
+      }
+    }
+  }
+  & td {
+    padding: 0.8em;    
+    &:last-child {
+      vertical-align: top;
+    }
+  }
+  & + table { //sibling tables
+    border-top: 1px solid #ddd;
+    th {
+      padding-top: 1em!important;
+    }
+  }
+  .call-header {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+table.holdins-unit tr.section div {
+  line-height: 1.55em;
+}
+
+.libraryhas {
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#holdings-tab table tr  { //compiled override
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#holdings-tab table th, #holdings-tab table td { //compiled override
+  padding-top: 0;
+  padding-bottom: 0;
+  @include respond-to(small) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
+/* responsive table */
+@media screen and (max-width: 480px) {
+  table, tbody {
+      display: block;
+      width: 100%;
+  }
+
+  table {
+    tr, th, td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+      width: 100%;
+    }
+  }
+
+  tr[typeof="Offer"] th,
+  #holdings-tab .holdings-table th,
+  div[resource="#record"] .table > tbody > tr > th,
+  div[resource="#record"] .table > tbody > tr > td {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 

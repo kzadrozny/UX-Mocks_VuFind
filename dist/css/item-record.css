@@ -15,9 +15,24 @@ h1 {
   font-size: 2em;
   margin-bottom: 0; }
 
+h2 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0; }
+
+h3 {
+  font-size: 1.3em; }
+
+h4 {
+  margin-left: 0.5em;
+  font-weight: 600;
+  color: #4c3b3a; }
+
 h5 {
-  font-size: 1.7em;
-  color: #670000; }
+  font-size: 1.2em;
+  color: #670000;
+  margin: 1em 0 0 0.35em;
+  font-style: italic; }
   h5 + h6 {
     margin-top: 0; }
 
@@ -74,50 +89,19 @@ dl {
   border: 1px solid #ddd;
   margin-bottom: 1em; }
   .holdings-locpanel .locpanel-heading {
-    background-color: #767676;
-    color: #fbfbf9;
+    background: #e8e7df;
     padding: 1em;
     margin-bottom: 0; }
     .holdings-locpanel .locpanel-heading h3 {
       margin: 0 0 0.25em; }
     .holdings-locpanel .locpanel-heading a {
-      color: #fff;
       text-decoration: underline; }
 
-#e-links .locpanel-heading {
-  background-color: #8A9045; }
-
-.holidings-copy {
-  padding: 1em 0 0;
-  line-height: 1.5em; }
-  .holidings-copy .notes {
-    line-height: 0.2em;
-    font-style: italic; }
-  .holidings-copy table {
-    background: transparent;
-    width: 100%;
-    box-shadow: 0px 5px 5px #ddd; }
-    .holidings-copy table th {
-      font-weight: 300;
-      padding-left: 1em;
-      padding-bottom: 0.3em; }
-    .holidings-copy table tr {
-      line-height: 1.5em; }
-      .holidings-copy table tr:first-child td {
-        padding-top: 0; }
-      .holidings-copy table tr:nth-child(even) {
-        background-color: #eee; }
-    .holidings-copy table td {
-      padding: 0.8em; }
-      .holidings-copy table td:last-child {
-        width: 35%;
-        vertical-align: top; }
-    .holidings-copy table + table {
-      border-top: 1px solid #ddd; }
-      .holidings-copy table + table th {
-        padding-top: 1em; }
-    .holidings-copy table .call-header {
-      border-bottom: 1px solid #ddd; }
+.holdings-unit {
+  border-bottom: none;
+  border-top: 1px dashed #ddd; }
+  .holdings-unit:nth-child(even) {
+    background: none; }
 
 .dl-horizontal dt {
   width: 150px; }
@@ -126,10 +110,29 @@ dl {
   margin-left: 160px; }
 
 .text-success, .text-danger {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  display: block; }
+
+.item-loc {
+  display: block;
+  font-style: italic;
+  line-height: 2em; }
+
+a.summaryToggle, a.itemsToggle {
+  font-size: 1.05em;
+  margin-top: 0.25em; }
+
+a.itemsToggle {
+  margin-top: 1em;
+  padding-top: 0.5em;
+  border-top: 1px dashed; }
+  @media (min-width: 48em) {
+    a.itemsToggle {
+      margin-left: -155px; } }
 
 a.eLink.text-success.external {
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  padding-top: 7px; }
 
 .explore-list {
   padding-left: 0;
@@ -139,12 +142,84 @@ a.eLink.text-success.external {
     .explore-list li:first-child {
       margin-top: 0; }
 
-.service {
+a.service.external, a.service {
+  padding-right: 15px;
+  white-space: nowrap;
   margin: 0; }
 
 a.bibToggle {
-  margin-top: 0;
-  background-color: #f3f2ee; }
+  margin-top: 0; }
 
 .template-name-view span {
   font-weight: inherit; }
+
+/***** TABLES ******/
+table {
+  background: transparent;
+  width: 100%;
+  padding: 1em 0 0;
+  line-height: 1.5em;
+  table-layout: auto !important;
+  word-wrap: normal; }
+  table .notes {
+    line-height: 0.2em;
+    font-style: italic; }
+  table th {
+    padding-left: 1em;
+    padding-bottom: 0.3em;
+    width: 155px; }
+  table tr {
+    line-height: 1.5em; }
+    table tr[typeof="Offer"] th {
+      width: 10%;
+      white-space: nowrap; }
+    table tr[typeof="Offer"]:nth-child(even) {
+      background-color: #eee; }
+  table td {
+    padding: 0.8em; }
+    table td:last-child {
+      vertical-align: top; }
+  table + table {
+    border-top: 1px solid #ddd; }
+    table + table th {
+      padding-top: 1em !important; }
+  table .call-header {
+    border-bottom: 1px solid #ddd; }
+
+table.holdins-unit tr.section div {
+  line-height: 1.55em; }
+
+.libraryhas {
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; }
+
+#holdings-tab table tr {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+#holdings-tab table th, #holdings-tab table td {
+  padding-top: 0;
+  padding-bottom: 0; }
+  @media (min-width: 48em) {
+    #holdings-tab table th, #holdings-tab table td {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em; } }
+
+/* responsive table */
+@media screen and (max-width: 480px) {
+  table, tbody {
+    display: block;
+    width: 100%; }
+  table tr, table th, table td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+    width: 100%; }
+  tr[typeof="Offer"] th,
+  #holdings-tab .holdings-table th,
+  div[resource="#record"] .table > tbody > tr > th,
+  div[resource="#record"] .table > tbody > tr > td {
+    width: 100%;
+    max-width: 100%; } }
