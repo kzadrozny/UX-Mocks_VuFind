@@ -6,37 +6,6 @@
  *		@include respond-to(medium) { ... }
  *		@include respond-to(large) { ... }
  */
-.alert {
-  margin: 10px 0; }
-
-.alert-list {
-  padding: 5px;
-  margin: 10px 0;
-  border: 1px solid; }
-
-.item-type {
-  color: #9A5324;
-  font-weight: 600; }
-
-.due-date {
-  font-weight: 600;
-  color: #800000;
-  font-size: 1.1em; }
-
-a.title {
-  font-weight: 600;
-  font-size: 1.1em; }
-
-[id^="record"] {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  line-height: 1.5em; }
-  [id^="record"]:nth-of-type(odd) {
-    background-color: #fff; }
-    @media (min-width: 48em) {
-      [id^="record"]:nth-of-type(odd) {
-        background-color: #f2efef; } }
-
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
   background-color: #806362; }
 
@@ -47,7 +16,8 @@ a.title {
 @media (max-width: 34em) {
   table.table-striped, .table-striped > tbody {
     display: block;
-    width: 100%; }
+    width: 100%;
+    max-width: none !important; }
     table.table-striped thead, table.table-striped tr, table.table-striped th, table.table-striped td, .table-striped > tbody thead, .table-striped > tbody tr, .table-striped > tbody th, .table-striped > tbody td {
       display: block;
       padding: 0;
@@ -60,84 +30,23 @@ a.title {
       margin-bottom: 6px;
       color: #444; } }
 
-.template-dir-myresearch.template-name-checkedout table.table th:nth-child(3) {
-  width: 12%; }
+.alert {
+  margin: 10px 0; }
+  [id^="record"] .alert {
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid; }
+  .alert a {
+    color: #32327f;
+    text-decoration: underline; }
+  .alert + .alert {
+    margin-top: 0; }
 
-.table-striped > tbody > tr:nth-child(even), .datagrid > tbody > tr:nth-child(even) {
-  background-color: #eee; }
-
-table.fine-table td:nth-of-type(1) {
-  width: 30%; }
-
-table.fine-table td:nth-of-type(2) {
-  white-space: nowrap; }
-
-table.fine-table tbody tr:last-child {
-  font-weight: bold;
-  border-top: 3px solid #ddd; }
-  table.fine-table tbody tr:last-child td {
-    background-color: #fcf8e3; }
-
-@media (max-width: 544px) {
-  table.fine-table thead {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0; }
-  table.fine-table tbody td:nth-of-type(1) {
-    width: 100%; }
-    table.fine-table tbody td:nth-of-type(1):before {
-      content: "Title &amp; Location: ";
-      font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(2):before {
-    content: "Bill Date: ";
-    font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(3):before {
-    content: "Due Date: ";
-    font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(4):before {
-    content: "Checked Out: ";
-    font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(5):before {
-    content: "Fine: ";
-    font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(6):before {
-    content: "Fee: ";
-    font-weight: bold; }
-  table.fine-table tbody td:nth-of-type(7):before {
-    content: "Balance: ";
-    font-weight: bold; } }
-
-table.datagrid {
-  border-bottom: 1px solid #ddd;
-  margin: 2em 0; }
-  @media (max-width: 544px) {
-    table.datagrid thead {
-      position: absolute;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0; }
-    table.datagrid tbody td:nth-of-type(2):before {
-      content: "Title: ";
-      font-weight: bold; }
-    table.datagrid tbody td:nth-of-type(3):before {
-      content: "Call Number: ";
-      font-weight: bold; }
-    table.datagrid tbody td:nth-of-type(4):before {
-      content: "Copy: ";
-      font-weight: bold; } }
-
-button.request {
-  background: #ccc0c0;
-  color: #000; }
+.alert-warning {
+  background-color: #fcf8e3; }
+  [id^="record"] .alert-warning {
+    color: #642822; }
 
 input[type="checkbox"] {
   margin: 1em 0;
@@ -162,3 +71,93 @@ input[type="checkbox"] {
   input[type="checkbox"]:focus {
     outline: 0 none;
     box-shadow: none; }
+
+[id^="record"] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1.5em; }
+  [id^="record"]:nth-of-type(odd) {
+    background-color: #fff; }
+    @media (min-width: 48em) {
+      [id^="record"]:nth-of-type(odd) {
+        background-color: #f2efef; } }
+
+.item-type {
+  color: #9A5324;
+  font-weight: 600; }
+
+.due-date {
+  font-weight: 600;
+  color: #800000;
+  font-size: 1.1em; }
+
+a.title {
+  font-weight: 600;
+  font-size: 1.1em; }
+
+.template-name-fines table tbody tr:last-child {
+  font-weight: bold;
+  border-top: 3px solid #ddd; }
+  .template-name-fines table tbody tr:last-child td {
+    background-color: #fcf8e3; }
+
+@media (max-width: 544px) {
+  .template-name-fines table thead {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+  .template-name-fines table tbody td:nth-of-type(1) {
+    width: 100%; }
+    .template-name-fines table tbody td:nth-of-type(1):before {
+      content: "Title & Location: ";
+      font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(2):before {
+    content: "Due Date: ";
+    font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(3):before {
+    content: "Return Date: ";
+    font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(4):before {
+    content: "Bill Date: ";
+    font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(5):before {
+    content: "Fine: ";
+    font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(6):before {
+    content: "Fee: ";
+    font-weight: bold; }
+  .template-name-fines table tbody td:nth-of-type(7):before {
+    content: "Balance: ";
+    font-weight: bold; } }
+
+.template-name-storagerequest table {
+  border-bottom: 1px solid #ddd;
+  margin: 2em 0; }
+  @media (max-width: 544px) {
+    .template-name-storagerequest table thead {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0; }
+    .template-name-storagerequest table tbody td:nth-of-type(2):before {
+      content: "Title: ";
+      font-weight: bold; }
+    .template-name-storagerequest table tbody td:nth-of-type(3):before {
+      content: "Call Number: ";
+      font-weight: bold; }
+    .template-name-storagerequest table tbody td:nth-of-type(4):before {
+      content: "Copy: ";
+      font-weight: bold; } }
+
+button.request {
+  background: #ccc0c0;
+  color: #000; }

@@ -1,45 +1,9 @@
 @import "base.scss";
 
-.alert {
-  margin: 10px 0;
-}
-
-.alert-list {
-    padding: 5px;
-    margin: 10px 0;
-    border: 1px solid;
-}
-
-.item-type {
-  color: #9A5324;
-  font-weight: 600;
-}
-
-.due-date {
-  font-weight: 600;
-  color: #800000;
-  font-size: 1.1em;
-}
-
-a.title {
-  font-weight: 600;
-  font-size: 1.1em;
-}
-
-[id^="record"] {
-	padding-top: 7px;
-	padding-bottom: 7px;
-  line-height: 1.5em;
-	&:nth-of-type(odd) {
-		background-color: #fff;
-		@include respond-to(small) {
-			background-color: #f2efef;
-		}
-	}
-}
+// ** Base Styles ** //
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-	background-color: #806362;
+  background-color: #806362;
 }
 
 .toolbar {
@@ -51,6 +15,7 @@ table.table-striped, .table-striped>tbody {
   @include respond-to(smallonly) { //mobile friendly magic
     display: block;
     width: 100%;
+    max-width: none!important;
     & thead, & tr, & th, & td {
       display: block;
       padding: 0;
@@ -69,30 +34,106 @@ table.table-striped, .table-striped>tbody {
 }
 
 
-.template-dir-myresearch.template-name-checkedout table.table th:nth-child(3) {
-  width: 12%; //VuFind Overwrite
+// ** Alerts ** //
+
+.alert {
+  margin: 10px 0;
+  [id^="record"] & {
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid;
+  }
+  & a {
+    color: #32327f;
+    text-decoration: underline;
+  }
+  & + & {
+    margin-top: 0;
+  }
 }
 
-.table-striped > tbody > tr:nth-child(even), .datagrid > tbody > tr:nth-child(even) {
-    background-color: #eee; //Need to research this issue before production
+.alert-warning { // Overwriting a style from phoenix/css/compiled.css?_=1482271041:8
+  background-color: #fcf8e3;
+  [id^="record"] & {
+    color: #642822;
+  }
 }
 
 
-table.fine-table {
-  td:nth-of-type(1) {
-    width: 30%;
-  }
-  td:nth-of-type(2) {
-    white-space: nowrap;
-  }
-  tbody tr:last-child {
-    font-weight:bold;
-    border-top: 3px solid #ddd;
-    & td {
-      background-color: #fcf8e3;
+// ** Checked Out Items + Holds ** //
+
+input[type="checkbox"]{
+  margin: 1em 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 5px;
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: 1px solid gray;
+  transition: all .3s linear;
+  &:checked {
+    background-color: #616530;
+    border: none;
+    &:before {
+      content: "\f00c";
+      font-family: 'FontAwesome';
+      color: #fff;
+      font-size: 1.5em;
+      padding-left: 0.2em;
     }
   }
-  @media(max-width: 544px) {
+  &:focus{
+    outline: 0 none;
+    box-shadow: none;
+  }
+}
+
+[id^="record"] {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1.5em;
+  &:nth-of-type(odd) {
+    background-color: #fff;
+    @include respond-to(small) {
+      background-color: #f2efef;
+    }
+  }
+}
+
+.item-type {
+  color: #9A5324;
+  font-weight: 600;
+}
+
+.due-date {
+  font-weight: 600;
+  color: #800000;
+  font-size: 1.1em;
+}
+
+a.title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+
+
+// ** Fines ** //
+
+.template-name-fines table { // Overwriting a style from phoenix/css/compiled.css?_=1482271041:32
+  tbody {
+    tr:last-child {
+      font-weight:bold;
+      border-top: 3px solid #ddd;
+      & td {
+        background-color: #fcf8e3;
+      }
+    }
+  }
+  @media(max-width: 544px) { // Mobile Only
     thead {
       position: absolute;
       overflow: hidden;
@@ -107,20 +148,20 @@ table.fine-table {
       td:nth-of-type(1) {
         width: 100%;
         &:before {
-          content: "Title &amp; Location: ";
+          content: "Title & Location: ";
           font-weight: bold;
         }
       }
       td:nth-of-type(2):before {
-        content: "Bill Date: ";
-        font-weight: bold;
-      }
-      td:nth-of-type(3):before {
         content: "Due Date: ";
         font-weight: bold;
       }
+      td:nth-of-type(3):before {
+        content: "Return Date: ";
+        font-weight: bold;
+      }
       td:nth-of-type(4):before {
-        content: "Checked Out: ";
+        content: "Bill Date: ";
         font-weight: bold;
       }
       td:nth-of-type(5):before {
@@ -139,7 +180,10 @@ table.fine-table {
   }
 }
 
-table.datagrid {  // Problem with dropdown in mobile
+
+// ** Mansueto Cart ** //
+
+.template-name-storagerequest table {  // Problem with dropdown in mobile
   border-bottom: 1px solid #ddd;
   margin: 2em 0;
   @media(max-width: 544px) {
@@ -176,36 +220,7 @@ button.request {
 }
 
 
-// ___ Div Selection Input ___ //
 
-
-input[type="checkbox"]{
-  margin: 1em 0;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 5px;
-  position: relative;
-  width: 2em;
-  height: 2em;
-  border: 1px solid gray;
-  transition: all .3s linear;
-  &:checked {
-    background-color: #616530;
-    border: none;
-    &:before {
-      content: "\f00c";
-      font-family: 'FontAwesome';
-      color: #fff;
-      font-size: 1.5em;
-      padding-left: 0.2em;
-    }
-  }
-  &:focus{
-    outline: 0 none;
-    box-shadow: none;
-  }
-}
 
 
 
