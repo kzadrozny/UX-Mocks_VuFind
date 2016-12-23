@@ -6,14 +6,14 @@ For the Catalog upgrade.
 
 ## Production Ready Files
 ### Mark-Up
-vufind-fines.html
-vufind-mansueto.html
-vufind-myaccount.html
-vufind-requested.html
+⋅⋅⋅vufind-fines.html
+⋅⋅⋅vufind-mansueto.html
+⋅⋅⋅vufind-myaccount.html
+⋅⋅⋅vufind-requested.html
 
 ### Styles
-Sass: /src/scss/myacct.scss
-Can be comverted to LESS using [csspre.com](http://csspre.com/convert/) or similar
+⋅⋅⋅Sass: /src/scss/myacct.scss
+⋅⋅⋅Can be comverted to LESS using [csspre.com](http://csspre.com/convert/) or similar⋅⋅
 
-If all else fails, the compiled CSS is here: /dist/css/myacct.css
+⋅⋅⋅If all else fails, the compiled CSS is here: /dist/css/myacct.css
 
