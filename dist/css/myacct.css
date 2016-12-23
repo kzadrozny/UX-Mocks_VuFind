@@ -14,18 +14,18 @@
   padding-bottom: 10px; }
 
 @media (max-width: 34em) {
-  table.table-striped, .table-striped > tbody {
+  .template-dir-myresearch table.table-striped, .template-dir-myresearch .table-striped > tbody {
     display: block;
     width: 100%;
     max-width: none !important; }
-    table.table-striped thead, table.table-striped tr, table.table-striped th, table.table-striped td, .table-striped > tbody thead, .table-striped > tbody tr, .table-striped > tbody th, .table-striped > tbody td {
+    .template-dir-myresearch table.table-striped thead, .template-dir-myresearch table.table-striped tr, .template-dir-myresearch table.table-striped th, .template-dir-myresearch table.table-striped td, .template-dir-myresearch .table-striped > tbody thead, .template-dir-myresearch .table-striped > tbody tr, .template-dir-myresearch .table-striped > tbody th, .template-dir-myresearch .table-striped > tbody td {
       display: block;
       padding: 0;
       text-align: left;
       white-space: normal; }
-    table.table-striped tr, .table-striped > tbody tr {
+    .template-dir-myresearch table.table-striped tr, .template-dir-myresearch .table-striped > tbody tr {
       border-bottom: 1px solid #ddd; }
-    table.table-striped td, .table-striped > tbody td {
+    .template-dir-myresearch table.table-striped td, .template-dir-myresearch .table-striped > tbody td {
       border: none;
       margin-bottom: 6px;
       color: #444; } }

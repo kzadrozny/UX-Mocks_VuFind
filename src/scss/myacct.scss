@@ -11,7 +11,7 @@
   padding-bottom: 10px;
 }
 
-table.table-striped, .table-striped>tbody {
+.template-dir-myresearch table.table-striped, .template-dir-myresearch .table-striped>tbody {
   @include respond-to(smallonly) { //mobile friendly magic
     display: block;
     width: 100%;
