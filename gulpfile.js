@@ -1,19 +1,20 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass'); // Requires the gulp-sass plugin
+var concat = require('gulp-concat');
+var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
 
 
-gulp.task('sass', function(){
-  return gulp.src('src/scss/**/*.scss') // Gets all files ending with .scss in src/scss and children dirs
-    .pipe(sass()) // Using gulp-sass
+gulp.task('less', function(){
+  return gulp.src('src/less/**/*.less')
+    .pipe(less())
     .pipe(gulp.dest('dist/css'))
 	.pipe(browserSync.reload({
       stream: true
     }))
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function(){
-  gulp.watch('src/scss/**/*.scss', ['sass']);
+gulp.task('watch', ['browserSync', 'less'], function(){
+  gulp.watch('src/less/**/*.less', ['less']);
   gulp.watch('*.html', browserSync.reload);
 })
 
@@ -25,5 +26,5 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task("default", ["sass", "watch"], function() {
+gulp.task("default", ["less", "watch"], function() {
 });

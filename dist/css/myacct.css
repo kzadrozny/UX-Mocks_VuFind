@@ -1,53 +1,67 @@
-/*
- * Media Queries
- * --------------------------------------------------
- *
- * Use as: @include respond-to(small) { ... }
- *		@include respond-to(medium) { ... }
- *		@include respond-to(large) { ... }
- */
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-  background-color: #806362; }
-
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-color: #806362;
+}
 .toolbar {
   border-bottom: 1px solid #eee;
-  padding-bottom: 10px; }
-
-@media (max-width: 34em) {
-  .template-dir-myresearch table.table-striped, .template-dir-myresearch .table-striped > tbody {
+  padding-bottom: 10px;
+}
+@media (max-width: 544px) {
+  .template-dir-myresearch table.table-striped,
+  .template-dir-myresearch .table-striped > tbody {
     display: block;
     width: 100%;
-    max-width: none !important; }
-    .template-dir-myresearch table.table-striped thead, .template-dir-myresearch table.table-striped tr, .template-dir-myresearch table.table-striped th, .template-dir-myresearch table.table-striped td, .template-dir-myresearch .table-striped > tbody thead, .template-dir-myresearch .table-striped > tbody tr, .template-dir-myresearch .table-striped > tbody th, .template-dir-myresearch .table-striped > tbody td {
-      display: block;
-      padding: 0;
-      text-align: left;
-      white-space: normal; }
-    .template-dir-myresearch table.table-striped tr, .template-dir-myresearch .table-striped > tbody tr {
-      border-bottom: 1px solid #ddd; }
-    .template-dir-myresearch table.table-striped td, .template-dir-myresearch .table-striped > tbody td {
-      border: none;
-      margin-bottom: 6px;
-      color: #444; } }
-
+    max-width: none!important;
+  }
+  .template-dir-myresearch table.table-striped thead,
+  .template-dir-myresearch .table-striped > tbody thead,
+  .template-dir-myresearch table.table-striped tr,
+  .template-dir-myresearch .table-striped > tbody tr,
+  .template-dir-myresearch table.table-striped th,
+  .template-dir-myresearch .table-striped > tbody th,
+  .template-dir-myresearch table.table-striped td,
+  .template-dir-myresearch .table-striped > tbody td {
+    display: block;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+  }
+  .template-dir-myresearch table.table-striped tr,
+  .template-dir-myresearch .table-striped > tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  .template-dir-myresearch table.table-striped td,
+  .template-dir-myresearch .table-striped > tbody td {
+    border: none;
+    margin-bottom: 6px;
+    color: #444;
+  }
+}
 .alert {
-  margin: 10px 0; }
-  [id^="record"] .alert {
-    text-align: center;
-    padding: 5px;
-    margin: 10px 0;
-    border: 1px solid; }
-  .alert a {
-    color: #32327f;
-    text-decoration: underline; }
-  .alert + .alert {
-    margin-top: 0; }
-
+  margin: 10px 0;
+}
+[id^="record"] .alert {
+  text-align: center;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid;
+}
+.alert a {
+  color: #32327f;
+  text-decoration: underline;
+}
+.alert + .alert {
+  margin-top: 0;
+}
 .alert-warning {
-  background-color: #fcf8e3; }
-  [id^="record"] .alert-warning {
-    color: #642822; }
-
+  background-color: #fcf8e3;
+}
+[id^="record"] .alert-warning {
+  color: #642822;
+}
 input[type="checkbox"] {
   margin: 1em 0;
   cursor: pointer;
@@ -58,49 +72,62 @@ input[type="checkbox"] {
   width: 2em;
   height: 2em;
   border: 1px solid gray;
-  transition: all .3s linear; }
-  input[type="checkbox"]:checked {
-    background-color: #616530;
-    border: none; }
-    input[type="checkbox"]:checked:before {
-      content: "\f00c";
-      font-family: 'FontAwesome';
-      color: #fff;
-      font-size: 1.5em;
-      padding-left: 0.2em; }
-  input[type="checkbox"]:focus {
-    outline: 0 none;
-    box-shadow: none; }
-
+  transition: all .3s linear;
+}
+input[type="checkbox"]:checked {
+  background-color: #616530;
+  border: none;
+}
+input[type="checkbox"]:checked:before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  color: #fff;
+  font-size: 1.5em;
+  padding-left: 0.2em;
+}
+input[type="checkbox"]:focus {
+  outline: 0 none;
+  box-shadow: none;
+}
 [id^="record"] {
   padding-top: 7px;
   padding-bottom: 7px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
+[id^="record"]:nth-of-type(odd) {
+  background-color: #fff;
+}
+@media (min-width: 544px) {
   [id^="record"]:nth-of-type(odd) {
-    background-color: #fff; }
-    @media (min-width: 48em) {
-      [id^="record"]:nth-of-type(odd) {
-        background-color: #f2efef; } }
-
+    background-color: #f2efef;
+  }
+}
 .item-type {
   color: #9A5324;
-  font-weight: 600; }
-
+  font-weight: 600;
+}
 .due-date {
   font-weight: 600;
   color: #800000;
-  font-size: 1.1em; }
-
+  font-size: 1.1em;
+}
 a.title {
   font-weight: 600;
-  font-size: 1.1em; }
-
+  font-size: 1.1em;
+}
+@media (max-width: 544px) {
+  .template-name-fines table tbody tr {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+}
 .template-name-fines table tbody tr:last-child {
   font-weight: bold;
-  border-top: 3px solid #ddd; }
-  .template-name-fines table tbody tr:last-child td {
-    background-color: #fcf8e3; }
-
+  border-top: 3px solid #ddd;
+}
+.template-name-fines table tbody tr:last-child td {
+  background-color: #fcf8e3;
+}
 @media (max-width: 544px) {
   .template-name-fines table thead {
     position: absolute;
@@ -110,54 +137,69 @@ a.title {
     width: 1px;
     margin: -1px;
     padding: 0;
-    border: 0; }
+    border: 0;
+  }
   .template-name-fines table tbody td:nth-of-type(1) {
-    width: 100%; }
-    .template-name-fines table tbody td:nth-of-type(1):before {
-      content: "Title & Location: ";
-      font-weight: bold; }
+    width: 100%;
+  }
+  .template-name-fines table tbody td:nth-of-type(1):before {
+    content: "Title & Location: ";
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(2):before {
     content: "Due Date: ";
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(3):before {
     content: "Return Date: ";
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(4):before {
     content: "Bill Date: ";
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(5):before {
     content: "Fee Type: ";
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(6):before {
     content: "Fine Amount: ";
-    font-weight: bold; }
+    font-weight: bold;
+  }
   .template-name-fines table tbody td:nth-of-type(7):before {
     content: "Balance: ";
-    font-weight: bold; } }
-
+    font-weight: bold;
+  }
+}
 .template-name-storagerequest table {
   border-bottom: 1px solid #ddd;
-  margin: 2em 0; }
-  @media (max-width: 544px) {
-    .template-name-storagerequest table thead {
-      position: absolute;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0; }
-    .template-name-storagerequest table tbody td:nth-of-type(2):before {
-      content: "Title: ";
-      font-weight: bold; }
-    .template-name-storagerequest table tbody td:nth-of-type(3):before {
-      content: "Call Number: ";
-      font-weight: bold; }
-    .template-name-storagerequest table tbody td:nth-of-type(4):before {
-      content: "Copy: ";
-      font-weight: bold; } }
-
+  margin: 2em 0;
+}
+@media (max-width: 544px) {
+  .template-name-storagerequest table thead {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .template-name-storagerequest table tbody td:nth-of-type(2):before {
+    content: "Title: ";
+    font-weight: bold;
+  }
+  .template-name-storagerequest table tbody td:nth-of-type(3):before {
+    content: "Call Number: ";
+    font-weight: bold;
+  }
+  .template-name-storagerequest table tbody td:nth-of-type(4):before {
+    content: "Copy: ";
+    font-weight: bold;
+  }
+}
 button.request {
   background: #ccc0c0;
-  color: #000; }
+  color: #000;
+}
