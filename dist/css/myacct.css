@@ -1,3 +1,9 @@
+.btn-primary {
+  color: #fff!important;
+  background-color: #800;
+  border-color: #6f0000;
+  text-decoration: none!important;
+}
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -47,7 +53,7 @@
   text-align: center;
   padding: 5px;
   margin: 10px 0;
-  border: 1px solid;
+  border: none;
 }
 .alert a {
   color: #32327f;
@@ -62,7 +68,11 @@
 [id^="record"] .alert-warning {
   color: #642822;
 }
-input[type="checkbox"] {
+.template-dir-myresearch input[type="checkbox"],
+.template-name-fines input[type="checkbox"],
+.template-name-holds input[type="checkbox"],
+.template-name-storagerequest input[type="checkbox"],
+.template-name-mylist input[type="checkbox"] {
   margin: 1em 0;
   cursor: pointer;
   -webkit-appearance: none;
@@ -74,18 +84,30 @@ input[type="checkbox"] {
   border: 1px solid gray;
   transition: all .3s linear;
 }
-input[type="checkbox"]:checked {
+.template-dir-myresearch input[type="checkbox"]:checked,
+.template-name-fines input[type="checkbox"]:checked,
+.template-name-holds input[type="checkbox"]:checked,
+.template-name-storagerequest input[type="checkbox"]:checked,
+.template-name-mylist input[type="checkbox"]:checked {
   background-color: #616530;
   border: none;
 }
-input[type="checkbox"]:checked:before {
+.template-dir-myresearch input[type="checkbox"]:checked:before,
+.template-name-fines input[type="checkbox"]:checked:before,
+.template-name-holds input[type="checkbox"]:checked:before,
+.template-name-storagerequest input[type="checkbox"]:checked:before,
+.template-name-mylist input[type="checkbox"]:checked:before {
   content: "\f00c";
   font-family: 'FontAwesome';
   color: #fff;
   font-size: 1.5em;
   padding-left: 0.2em;
 }
-input[type="checkbox"]:focus {
+.template-dir-myresearch input[type="checkbox"]:focus,
+.template-name-fines input[type="checkbox"]:focus,
+.template-name-holds input[type="checkbox"]:focus,
+.template-name-storagerequest input[type="checkbox"]:focus,
+.template-name-mylist input[type="checkbox"]:focus {
   outline: 0 none;
   box-shadow: none;
 }
