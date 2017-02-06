@@ -17,7 +17,6 @@ h3 {
   font-size: 1.3em;
 }
 h4 {
-  margin-left: 0.5em;
   font-weight: 600;
   color: #4c3b3a;
 }
@@ -28,12 +27,29 @@ h5 {
   font-style: italic;
 }
 h5 + h6 {
-  margin-top: 0;
+  margin-top: 0.5em;
 }
 h6 {
   font-size: 1.3em;
   margin: 1.3em 0 0.5em 0;
   border-bottom: 1px solid #eee;
+}
+span.author {
+  font-size: 0.65em;
+  display: block;
+  padding: 0.25em 0 0.75em;
+}
+.text-center img {
+  padding-top: 1.5em;
+  max-height: 20em;
+}
+.bookplate {
+  margin: 0.75em 1em;
+}
+.bookplate img {
+  max-height: 10em;
+  margin-bottom: 0.5em;
+  display: block;
 }
 dl {
   font-size: 1.1em;
@@ -98,7 +114,7 @@ dl dd {
   margin-bottom: 1em;
 }
 .holdings-locpanel .locpanel-heading {
-  background: #e8e7df;
+  background: #d0d2b4;
   padding: 1em;
   margin-bottom: 0;
 }
@@ -106,7 +122,11 @@ dl dd {
   margin: 0 0 0.25em;
 }
 .holdings-locpanel .locpanel-heading a {
+  color: #155f83;
   text-decoration: underline;
+}
+.holdings-locpanel .locpanel-heading.online {
+  background-color: #d9e7e8;
 }
 .holdings-unit {
   border-bottom: none;
@@ -126,6 +146,11 @@ dl dd {
   font-size: 1.2em;
   display: block;
 }
+.text-unknown {
+  color: #b77512;
+  font-size: 1.1em;
+  display: block;
+}
 .item-loc {
   display: block;
   font-style: italic;
@@ -141,14 +166,10 @@ a.itemsToggle {
   padding-top: 0.5em;
   border-top: 1px dashed;
 }
-@media (min-width: 544px) {
-  a.itemsToggle {
-    margin-left: -155px;
-  }
-}
-a.eLink.text-success.external {
-  font-size: 1.1em;
+a.eLink {
+  font-size: 1.2em;
   padding-top: 7px;
+  display: block;
 }
 .explore-list {
   padding-left: 0;
@@ -180,6 +201,9 @@ table {
   line-height: 1.5em;
   table-layout: auto !important;
   word-wrap: normal;
+}
+table thead h6 {
+  margin-top: 0;
 }
 table .notes {
   line-height: 0.2em;
@@ -219,9 +243,23 @@ table.holdins-unit tr.section div {
   line-height: 1.55em;
 }
 .libraryhas {
-  background: #f9f9f9;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  margin: 1em auto 1.75em;
+  padding-bottom: 0.5em;
+  background-color: #f3f3ec;
+  border: 1px solid #dbddc7;
+}
+.libraryhas ul {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.libraryhas h5 {
+  padding-left: 0.75em;
+}
+.libraryhas h6 {
+  font-size: 1.1em;
+  border-bottom: 1px solid #642822;
 }
 #holdings-tab table tr {
   padding-top: 0.5em;
@@ -237,6 +275,14 @@ table.holdins-unit tr.section div {
   #holdings-tab table td {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+  }
+}
+.holdings-table tbody > tr > th {
+  border-top: none;
+}
+@media (min-width: 544px) {
+  .holdings-table tbody > tr > th {
+    padding-left: 1.5em;
   }
 }
 /* responsive table */
