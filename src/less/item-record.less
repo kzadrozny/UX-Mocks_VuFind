@@ -257,7 +257,7 @@ table {
     }
   }
   & td {
-    padding: 0.8em;    
+    padding: 0.8em;   
     &:last-child {
       vertical-align: top;
     }
@@ -316,6 +316,17 @@ table.holdins-unit tr.section div {
    @media(min-width: 544px) {
     padding-left: 1.5em;
   }
+}
+
+table.holdings-table+table.holdings-table {
+  thead>tr>th {
+    padding-top: 2em!important;
+  }
+}
+
+// Bullshit to overide all the base styles
+.table > tbody > tr > td {
+  border-top: none;
 }
 
 
