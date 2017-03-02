@@ -143,7 +143,8 @@ dl dd {
 }
 .text-success,
 .text-danger {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  padding-right: 1.2em;
   display: block;
 }
 .text-unknown {
@@ -156,15 +157,12 @@ dl dd {
   font-style: italic;
   line-height: 2em;
 }
-a.summaryToggle,
-a.itemsToggle {
+a.summaryToggle {
   font-size: 1.05em;
   margin-top: 0.25em;
 }
 a.itemsToggle {
-  margin-top: 1em;
-  padding-top: 0.5em;
-  border-top: 1px dashed;
+  font-size: 1em;
 }
 a.eLink {
   font-size: 1.2em;
@@ -243,8 +241,8 @@ table.holdins-unit tr.section div {
   line-height: 1.55em;
 }
 .libraryhas {
-  margin: 1em auto 1.75em;
-  padding-bottom: 0.5em;
+  margin: 1em auto;
+  padding-bottom: 0;
   background-color: #f3f3ec;
   border: 1px solid #dbddc7;
 }
@@ -273,8 +271,8 @@ table.holdins-unit tr.section div {
 @media (min-width: 544px) {
   #holdings-tab table th,
   #holdings-tab table td {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 0.45em;
+    padding-bottom: 0.45em;
   }
 }
 .holdings-table tbody > tr > th {
