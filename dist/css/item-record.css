@@ -34,6 +34,15 @@ h6 {
   margin: 1.3em 0 0.5em 0;
   border-bottom: 1px solid #eee;
 }
+@media (max-width: 767px) {
+  .navbar > ul {
+    display: inline;
+    float: none;
+  }
+  .navbar > ul a {
+    font-size: 1.2em;
+  }
+}
 span.author {
   font-size: 0.65em;
   display: block;
@@ -115,7 +124,7 @@ dl dd {
 }
 .holdings-locpanel .locpanel-heading {
   background: #d0d2b4;
-  padding: 1em;
+  padding: 0.05em 1em;
   margin-bottom: 0;
 }
 .holdings-locpanel .locpanel-heading h3 {
@@ -129,11 +138,18 @@ dl dd {
   background-color: #d9e7e8;
 }
 .holdings-unit {
+  padding: 10px;
   border-bottom: none;
   border-top: 1px dashed #ddd;
 }
 .holdings-unit:nth-child(even) {
   background: none;
+}
+.holdings-unit .btn-info {
+  font-size: 0.75em;
+  padding: 6px;
+  margin-bottom: 0.75em;
+  margin-left: 0.5em;
 }
 .dl-horizontal dt {
   width: 150px;
@@ -156,6 +172,9 @@ dl dd {
   display: block;
   font-style: italic;
   line-height: 2em;
+}
+.location-change {
+  color: maroon;
 }
 a.summaryToggle {
   font-size: 1.05em;
@@ -258,6 +277,7 @@ table.holdins-unit tr.section div {
 .libraryhas h6 {
   font-size: 1.1em;
   border-bottom: 1px solid #642822;
+  margin-top: 0.25em;
 }
 #holdings-tab table tr {
   padding-top: 0.5em;
