@@ -138,12 +138,18 @@ dl {
     background: #d0d2b4;
     padding: 0.05em 1em;
     margin-bottom: 0;
+    h2 {
+      display:inline-block;
+    }
     h3 {
-      margin: 0 0 0.25em;
+      font-size: 1.15em;
+      margin: 0 0 0.5em!important; //compiled override
+      display: inline-block!important; //compiled override
     }
     a {
       color: #155f83;
       text-decoration: underline;
+      margin-left:0.75em;
     }
     &.online {
       background-color: #d9e7e8;
@@ -152,7 +158,7 @@ dl {
 }
 
 .holdings-unit {
-  padding: 10px; //compiled override
+  padding: 0em 1em 1em; //compiled override
   border-bottom: none;
   border-top: 1px dashed #ddd;
   &:nth-child(even) { //compiled override
@@ -173,6 +179,15 @@ dl {
   dd {
     margin-left: 160px;
   }
+}
+
+.notes, .location-change {
+  display: block;
+}
+
+.loan-period {
+  margin-left: 2em;
+  color: #000;
 }
 
 .text-success, .text-danger, {

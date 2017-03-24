@@ -127,18 +127,24 @@ dl dd {
   padding: 0.05em 1em;
   margin-bottom: 0;
 }
+.holdings-locpanel .locpanel-heading h2 {
+  display: inline-block;
+}
 .holdings-locpanel .locpanel-heading h3 {
-  margin: 0 0 0.25em;
+  font-size: 1.15em;
+  margin: 0 0 0.5em!important;
+  display: inline-block !important;
 }
 .holdings-locpanel .locpanel-heading a {
   color: #155f83;
   text-decoration: underline;
+  margin-left: 0.75em;
 }
 .holdings-locpanel .locpanel-heading.online {
   background-color: #d9e7e8;
 }
 .holdings-unit {
-  padding: 10px;
+  padding: 0em 1em 1em;
   border-bottom: none;
   border-top: 1px dashed #ddd;
 }
@@ -156,6 +162,14 @@ dl dd {
 }
 .dl-horizontal dd {
   margin-left: 160px;
+}
+.notes,
+.location-change {
+  display: block;
+}
+.loan-period {
+  margin-left: 2em;
+  color: #000;
 }
 .text-success,
 .text-danger {
