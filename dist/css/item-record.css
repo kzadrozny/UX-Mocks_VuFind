@@ -189,6 +189,19 @@ dl dd {
 }
 .location-change {
   color: maroon;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+a.location-maplink {
+  text-decoration: underline;
+  margin-left: 1em;
+}
+a.location-maplink:after {
+  content: none;
+}
+.holdings-notes {
+  text-decoration: italic;
+  margin: 0.75em 0.5em 0.5em;
 }
 a.summaryToggle {
   font-size: 1.05em;
