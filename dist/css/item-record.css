@@ -131,7 +131,8 @@ dl dd {
   display: inline-block;
 }
 .holdings-locpanel .locpanel-heading h3 {
-  font-size: 1.15em;
+  font-size: 1.35em;
+  font-weight: 600;
   margin: 0 0 0.5em!important;
   display: inline-block !important;
 }
@@ -142,6 +143,10 @@ dl dd {
 }
 .holdings-locpanel .locpanel-heading.online {
   background-color: #d9e7e8;
+}
+.locpanel-heading .location-change {
+  margin-top: -5px;
+  font-weight: 600;
 }
 .holdings-unit {
   padding: 0em 1em 1em;
@@ -294,8 +299,6 @@ table.holdins-unit tr.section div {
 .libraryhas ul {
   list-style: none;
   list-style-type: none;
-  padding-left: 1em;
-  text-indent: -1em;
 }
 .libraryhas h5 {
   padding-left: 0.75em;
