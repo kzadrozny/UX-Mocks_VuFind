@@ -1,6 +1,6 @@
 # VuFind Design Updates
 
-For the Catalog upgrade.
+For the Catalog upgrade. (Used to host mock-ups for UX testing or stakeholder approval before dev production.)
 
 ![](http://www.reactiongifs.us/wp-content/uploads/2016/09/state_the_obvious_futurama.gif)
 
