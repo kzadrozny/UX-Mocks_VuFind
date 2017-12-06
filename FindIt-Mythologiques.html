@@ -45,7 +45,22 @@
     //<!--
     vufindString = {bulk_email_success: "Your item(s) were e-mailed",bulk_save_success: "Your item(s) were saved successfully",close: "close",loading: "Loading",sms_success: "Message sent.",bulk_noitems_advice: "No items were selected. Please click on a checkbox next to an item and try again.",confirmDelete: "Are you sure you want to delete this?",confirmEmpty: "Are you sure you want to empty your Book Bag?",viewBookBag: "View Book Bag",addBookBag: "Save Record",removeBookBag: "Remove from Book Bag",itemsAddBag: "item(s) added to your Book Bag",itemsInBag: "item(s) are either already in your Book Bag or could not be added",bookbagMax: "100",bookbagFull: "Your Book Bag is Full",bookbagStatusFull: "Full"};
     //-->
-</script>  </head>
+</script>
+
+<style>
+  @media (min-width: 768px) {
+.navbar-brand {
+    background: transparent url(images/ucl_FindIt_logo.png) 0 0 no-repeat;
+    margin: 0;
+    margin-top: 10px;
+    height: 86px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 433px;
+}}
+</style>
+
+</head>
   <body>
         <header role="banner" class="hidden-print">
       <div class="container navbar">
@@ -58,7 +73,7 @@
     <i class="fa fa-bars fa-lg"></i>
   </button>
   <a role="button" class="navbar-brand hidden-md hidden-sm hidden-xs" href="/vufind/" style="background: transparent url(images/ucl_FindIt_logo.png) 0 10px no-repeat;">The University of Chicago Library Catalog</a>
-  <a role="button" class="navbar-brand hidden-lg" href="/vufind/">Library <span class="tagline">Catalog</span></a>
+  <a role="button" class="navbar-brand hidden-lg" href="/vufind/">Library <span class="tagline">FindIt!</span></a>
 </div>
 
   <div class="collapse navbar-collapse" id="header-collapse">
