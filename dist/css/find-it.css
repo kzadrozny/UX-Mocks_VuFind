@@ -1,53 +1,166 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+@media print {
+  @page {
+    size: 330mm 427mm;
+    margin: 1cm; }
+  a[href]:after {
+    content: none !important; }
+  .container {
+    width: 1170px; }
+  .navbar, #footer {
+    display: none; }
+  body {
+    overflow: visible !important; }
+  div.container, div.container-fluid {
+    margin: none;
+    padding: none; }
+  div.row, div.row-fluid {
+    margin: none;
+    padding: none; }
+  h2, h3, h4, h5, h6 {
+    page-break-after: avoid; }
+  /*img {
+       max-width: 100% !important;
+    }*/
+  ul, img {
+    page-break-inside: avoid; } }
+
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Global
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 50px;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif; }
+  @media (min-width: 48em) {
+    body {
+      padding-top: 100px; } }
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+@media (min-width: 48em) {
+  .fluid-top {
+    padding: 0px; } }
+
+.navbar-brand {
+  max-width: 250px;
+  padding: 5px 15px 25px 15px; }
+  @media (min-width: 48em) {
+    .navbar-brand {
+      max-width: 275px;
+      padding-top: 15px; } }
+  @media (min-width: 62em) {
+    .navbar-brand {
+      max-width: 350px;
+      padding: 7px 15px 25px 35px; } }
+
+@media (min-width: 62em) {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 15px; } }
+
+.navbar-default {
+  border: 0px;
+  background-repeat: repeat;
+  background-color: #800000;
+  z-index: 10;
+  border-radius: 0; }
+
+#navbar {
+  background-color: #670000;
+  font-size: 1.1em;
+  padding-left: 0.5em; }
+  @media (min-width: 48em) {
+    #navbar {
+      margin-top: 60px; } }
+  #navbar .navbar-nav {
+    float: left; }
+    @media (min-width: 48em) {
+      #navbar .navbar-nav {
+        float: right; } }
+    #navbar .navbar-nav > li > a {
+      color: #eee;
+      padding: 10px; }
+      #navbar .navbar-nav > li > a:hover {
+        color: #fff;
+        background-color: #642822; }
+      #navbar .navbar-nav > li > a:focus {
+        color: #fff; }
+
+/*
+ * Find It! Content
+ * --------------------------------------------------
+ */
 .findit-wrap {
-  padding-top: 2em!important;
-  padding-bottom: 3em!important;
-}
-.findit-wrap .fi-header {
-  padding: 1em 1em 0.5em;
-  border-top: 1px dashed #ddd;
-  border-bottom: 1px dashed #ddd;
-}
-.findit-wrap .fi-header h1 {
-  color: #670000;
-  display: inline;
-}
-.holdings-unit p {
-  padding-top: 10px;
-}
+  padding-top: 2em !important;
+  padding-bottom: 3em !important; }
+  .findit-wrap .fi-header {
+    padding: 1em 1em 0.5em;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd; }
+    .findit-wrap .fi-header h1 {
+      color: #670000;
+      display: inline; }
+  .findit-wrap .citation {
+    padding: 0 0 1em 0.5em; }
+    .findit-wrap .citation p {
+      font-size: 1.2em; }
+  .findit-wrap .holdings-locpanel {
+    max-width: 60em; }
+  .findit-wrap .locpanel-heading {
+    padding: 0.75em 0 0.5em 1em; }
+    .findit-wrap .locpanel-heading h2 {
+      display: inline; }
+
+.holdings-table {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee; }
+
+.holdings-unit {
+  padding-top: 0.75em; }
+  .holdings-unit p {
+    padding-top: 10px; }
+
 .locpanel-heading.getit {
-  background-color: #f4e6d0;
-}
+  background-color: #f4e6d0; }
+
 .text-getit {
-  color: #9A5324;
-  padding-top: 0.75em;
-  font-size: 1.2em;
-  display: block;
-}
-.findit-content {
-  padding-left: 1.75em;
-}
-.findit-content .citation {
-  padding: 0 0 1em 0.5em;
-}
-.findit-content .citation p {
-  font-size: 1.2em;
-}
-.findit-content .holdings-locpanel {
-  max-width: 60em;
-}
-.findit-content .locpanel-heading {
-  padding: 0.75em 0 0.5em 1em;
-}
-.findit-content .locpanel-heading h2 {
-  display: inline;
-}
+  padding: 0.75em 0 1em 0;
+  display: block; }
+
 .table > tbody > tr > th {
-  border-top: none;
-}
+  border-top: none; }
+
 .light-link {
-  font-weight: 400;
-}
+  font-weight: 400; }
+
 a.getit {
   font-size: 1.2em;
-  margin-top: 0.5em;
-}
+  margin-top: 0.5em; }
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+.footer {
+  width: 100%;
+  background: #800000;
+  background-repeat: repeat;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0; }
+
+/*# sourceMappingURL=find-it.css.map */

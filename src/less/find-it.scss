@@ -1,0 +1,260 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+
+@mixin respond-to($breakpoint) {
+  // Extra small devices (phones, 544px and up)
+  @if $breakpoint == "xsmall" {
+    @media (min-width: 34em) {
+      @content;
+    }
+  }
+
+  // Small devices (landscape phones, 768px and up)
+  @else if $breakpoint == "small" {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+  // Medium devices (crappy laptops, tablets, 992px and up)
+  @else if $breakpoint == "medium" {
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+  // Large devices (desktops, 1200px and up)
+  @else if $breakpoint == "large" {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  //Extra large devices (large desktops, 1900px and up)
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 118em) {
+      @content;
+    }
+  }
+  
+  // Short-cut to target extra small devices *only* (phones, 544px and up)
+  @else if $breakpoint == "smallonly" {
+    @media (max-width: 34em) {
+      @content;
+    }
+  }
+}
+
+
+@media print {
+    @page {
+        size: 330mm 427mm;
+        margin: 1cm;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+    .container {
+        width: 1170px;
+    }
+    .navbar, #footer {
+        display: none;
+    }
+    body {
+        overflow: visible !important; 
+    }
+    div.container, div.container-fluid {
+        margin: none;
+        padding: none;
+    }
+    div.row, div.row-fluid {
+        margin: none;
+        padding: none;
+    }
+    h2, h3, h4, h5, h6 {
+       page-break-after: avoid;
+    }
+    /*img {
+       max-width: 100% !important;
+    }*/
+    ul, img {
+       page-break-inside: avoid;
+    }
+}
+
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+
+$main: #800000;
+$accent: #670000;
+
+
+/*
+ * Global
+ * --------------------------------------------------
+ */
+
+body {
+  padding-top: 50px;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  @include respond-to(small) {
+  padding-top: 100px;
+  }
+}
+
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+
+.fluid-top {
+  @include respond-to(small) {
+    padding: 0px;
+  }
+}
+
+.navbar-brand {
+  max-width: 250px;
+  padding: 5px 15px 25px 15px;
+  @include respond-to(small) {
+    max-width: 275px;
+    padding-top: 15px;
+  }
+  @include respond-to(medium) {
+    max-width: 350px;
+    padding: 7px 15px 25px 35px;
+  }
+}
+
+.navbar>.container-fluid .navbar-brand {
+  @include respond-to(medium) {
+    margin-left: 15px;
+  }
+}
+
+.navbar-default {
+  border: 0px;
+  background-repeat: repeat;
+  background-color: $main;
+  z-index: 10;
+  border-radius: 0;
+}
+
+#navbar {
+  background-color: $accent;
+  font-size: 1.1em;
+  padding-left:0.5em;
+  @include respond-to(small) {
+    margin-top: 60px;
+  }
+  .navbar-nav {
+    float: left;
+    @include respond-to(small) {
+      float: right;
+    }
+    &>li>a {
+      color: #eee;
+      padding: 10px;
+      &:hover {
+        color: #fff;
+        background-color: #642822;
+      }
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+/*
+ * Find It! Content
+ * --------------------------------------------------
+ */
+
+.findit-wrap {
+  padding-top: 2em!important;
+  padding-bottom: 3em!important;
+  .fi-header {
+    padding: 1em 1em 0.5em;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    h1 {
+      color: $accent;
+      display: inline;
+    }
+  }
+  .citation {
+    padding: 0 0 1em 0.5em;
+    p {
+      font-size: 1.2em;
+    }
+  }
+  .holdings-locpanel {
+    max-width: 60em;
+  }
+  .locpanel-heading {
+    padding: 0.75em 0 0.5em 1em;
+    h2 {
+      display: inline;
+    }
+  }
+}
+
+.holdings-table {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.holdings-unit {
+  padding-top: 0.75em;
+  p {
+    padding-top: 10px;
+  }
+}
+
+.locpanel-heading.getit {
+  background-color: #f4e6d0;
+}
+
+.text-getit {
+  padding: 0.75em 0 1em 0;
+  display: block;
+}
+
+.table > tbody > tr > th {
+  border-top: none;
+}
+
+.light-link {
+  font-weight: 400;
+}
+
+a.getit {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+
+.footer {
+  width: 100%;
+  background: $main;
+  background-repeat: repeat;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+
