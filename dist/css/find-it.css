@@ -127,6 +127,8 @@ body {
 .holdings-table {
   margin-bottom: 10px;
   border-bottom: 1px solid #eee; }
+  .holdings-table tr:hover {
+    background-color: #f5f6f0 !important; }
 
 .holdings-unit {
   padding-top: 0.75em; }
