@@ -246,6 +246,55 @@ a.getit {
 }
 
 /*
+ * ILL Request Page
+ * --------------------------------------------------
+ */
+
+fieldset {
+  padding: 1em 2em;
+    h2 {
+      font-size:1.65em;
+    }
+    legend {
+      font-size: 1em;
+      color: $accent;
+      padding-top: 1.3em;
+      margin-bottom: 5px;
+      & + h2 {
+        margin-top: 0;
+      }
+    }
+    label {
+      padding-top: 0.75em;
+      display: block;
+    }
+    input[type="submit"] {
+      margin: 1.5em 0 0.75em;
+      display: block;
+      background-color: $accent;
+      color: #fff;
+      font-size: 1.1em;
+      padding: 1em;
+      line-height: 0.45em;
+      border: none;
+      &:hover {
+        color: #000;
+        background-color: #c89d9a;
+      }
+    }
+}
+
+.fineprint {
+  font-size: 0.85em;
+}
+
+.locpanel-heading h1 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0;
+}
+
+/*
  * Footer
  * --------------------------------------------------
  */

@@ -153,6 +153,45 @@ a.getit {
   margin-top: 0.5em; }
 
 /*
+ * ILL Request Page
+ * --------------------------------------------------
+ */
+fieldset {
+  padding: 1em 2em; }
+  fieldset h2 {
+    font-size: 1.65em; }
+  fieldset legend {
+    font-size: 1em;
+    color: #670000;
+    padding-top: 1.3em;
+    margin-bottom: 5px; }
+    fieldset legend + h2 {
+      margin-top: 0; }
+  fieldset label {
+    padding-top: 0.75em;
+    display: block; }
+  fieldset input[type="submit"] {
+    margin: 1.5em 0 0.75em;
+    display: block;
+    background-color: #670000;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    line-height: 0.45em;
+    border: none; }
+    fieldset input[type="submit"]:hover {
+      color: #000;
+      background-color: #c89d9a; }
+
+.fineprint {
+  font-size: 0.85em; }
+
+.locpanel-heading h1 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0; }
+
+/*
  * Footer
  * --------------------------------------------------
  */
