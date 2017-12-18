@@ -182,6 +182,8 @@ fieldset {
     fieldset input[type="submit"]:hover {
       color: #000;
       background-color: #c89d9a; }
+  fieldset input#notes {
+    width: 30em; }
 
 .fineprint {
   font-size: 0.85em; }
