@@ -106,6 +106,13 @@ body {
 .findit-wrap {
   padding-top: 2em !important;
   padding-bottom: 3em !important; }
+  .findit-wrap .text-success, .findit-wrap .text-danger, .findit-wrap .text-unknown {
+    display: unset;
+    font-size: 1em; }
+  .findit-wrap .alert {
+    padding: 7px;
+    margin-top: -0.5em;
+    margin-left: -1em; }
   .findit-wrap .fi-header {
     padding: 1em 1em 0.5em;
     border-top: 1px dashed #ddd;
@@ -119,21 +126,43 @@ body {
       font-size: 1.2em; }
   .findit-wrap .holdings-locpanel {
     max-width: 60em; }
+    .findit-wrap .holdings-locpanel .location {
+      padding: 0 2em; }
+    .findit-wrap .holdings-locpanel .catalog-record {
+      padding-right: 2em; }
   .findit-wrap .locpanel-heading {
     padding: 0.75em 0 0.5em 1em; }
     .findit-wrap .locpanel-heading h2 {
       display: inline; }
+  .findit-wrap .view-all {
+    float: right;
+    font-size: 0.9em;
+    color: #767676; }
+    .findit-wrap .view-all a {
+      color: #767676;
+      text-decoration: underline; }
 
 .holdings-table {
   margin-bottom: 10px;
   border-bottom: 1px solid #eee; }
-  .holdings-table tr:hover {
-    background-color: #f5f6f0 !important; }
 
 .holdings-unit {
   padding-top: 0.75em; }
   .holdings-unit p {
     padding-top: 10px; }
+  .holdings-unit .result-title {
+    font-size: 1.15em; }
+  .findit-wrap .holdings-unit {
+    margin: 1em 1em 0 1em;
+    border-top: none; }
+  .holdings-unit .row {
+    padding-left: 1em;
+    padding-bottom: 0.5em; }
+    .holdings-unit .row + .row {
+      padding-top: 0.5em;
+      border-top: 1px solid #eee; }
+    .holdings-unit .row.in-library {
+      padding-left: 1em; }
 
 .locpanel-heading.getit {
   background-color: #f4e6d0; }
