@@ -111,8 +111,15 @@ body {
     font-size: 1em; }
   .findit-wrap .alert {
     padding: 7px;
-    margin-top: -0.5em;
-    margin-left: -1em; }
+    margin: -1em 0 1em -1em; }
+    .findit-wrap .alert.alert-success-match {
+      color: #3c763d; }
+      .findit-wrap .alert.alert-success-match:before {
+        font-family: FontAwesome;
+        color: #b1c8b1;
+        display: inline-block;
+        content: "\f00c";
+        margin-right: 0.5em; }
   .findit-wrap .fi-header {
     padding: 1em 1em 0.5em;
     border-top: 1px dashed #ddd;
@@ -152,6 +159,8 @@ body {
     padding-top: 10px; }
   .holdings-unit .result-title {
     font-size: 1.15em; }
+    .holdings-unit .result-title .title {
+      padding-right: 1em; }
   .findit-wrap .holdings-unit {
     margin: 1em 1em 0 1em;
     border-top: none; }

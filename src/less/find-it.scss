@@ -188,8 +188,17 @@ body {
   }
   .alert {
     padding: 7px;
-    margin-top: -0.5em;
-    margin-left: -1em;
+    margin: -1em 0 1em -1em;
+    &.alert-success-match {
+      color: #3c763d;
+      &:before {
+        font-family: FontAwesome;
+        color: #b1c8b1;
+        display: inline-block;
+        content: "\f00c";
+        margin-right: 0.5em;
+      }
+    }
   }
   .fi-header {
     padding: 1em 1em 0.5em;
@@ -246,17 +255,11 @@ body {
   p {
     padding-top: 10px;
   }
-  // .status-note {
-  //   margin-bottom: 1em;
-  //   &.text-success:before {
-  //     font-family: FontAwesome;
-  //     display: inline-block;
-  //     content: "\f00c";
-  //     margin-right: 0.5em;
-  //   }
-  //}
-    .result-title {
+  .result-title {
     font-size: 1.15em;
+    .title {
+      padding-right: 1em;
+    }
   }
   .findit-wrap & {
     margin: 1em 1em 0 1em;
