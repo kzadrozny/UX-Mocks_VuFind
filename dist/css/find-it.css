@@ -120,6 +120,22 @@ body {
         display: inline-block;
         content: "\f00c";
         margin-right: 0.5em; }
+    .findit-wrap .alert.alert-no-match {
+      color: #767676; }
+      .findit-wrap .alert.alert-no-match:before {
+        font-family: FontAwesome;
+        color: #D6D6CE;
+        display: inline-block;
+        content: "\f00d";
+        margin-right: 0.5em; }
+    .findit-wrap .alert .resubmit-search {
+      font-size: 1.15em;
+      padding-top: 1em; }
+      .findit-wrap .alert .resubmit-search:after {
+        font-family: FontAwesome;
+        color: #437e9b;
+        display: inline-block;
+        content: "\f0a9"; }
   .findit-wrap .fi-header {
     padding: 1em 1em 0.5em;
     border-top: 1px dashed #ddd;

@@ -179,6 +179,7 @@ body {
  * --------------------------------------------------
  */
 
+
 .findit-wrap {
   padding-top: 2em!important;
   padding-bottom: 3em!important;
@@ -197,6 +198,26 @@ body {
         display: inline-block;
         content: "\f00c";
         margin-right: 0.5em;
+      }
+    }
+    &.alert-no-match {
+      color: #767676;
+      &:before {
+        font-family: FontAwesome;
+        color: #D6D6CE;
+        display: inline-block;
+        content: "\f00d";
+        margin-right: 0.5em;
+      }
+    }
+    .resubmit-search {
+      font-size: 1.15em;
+      padding-top: 1em;
+      &:after {
+        font-family: FontAwesome;
+        color: #437e9b;
+        display: inline-block;
+        content: "\f0a9";
       }
     }
   }
