@@ -69,13 +69,23 @@
 
         <div id="e-links" class="holdings-unit">
           <div class="row">
-            <div class="result-title"><a href="http://www.nature.com.proxy.uchicago.edu/nature/archive/index.html" title="getFullTxt" class="clickEventBound external" target="_blank">Nature <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
-            Available from 1869 volume: 1 issue:1
+            <div class="result-title"><a a href="http://proxy.uchicago.edu/login?url=http://www.nature.com/nature/archive/index.html" target="_blank">Nature <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div> Available from 1869 volume: 1 issue: 1
           </div>
-          <div class="row">
-            <span class="view-all">OR view <a href="https://catalog.lib.uchicago.edu/vufind/Record/2386211" target="_blank">all available e-resources</a> for this title</a></div>
-            </div>
+          <div class="row e-list-wrapper">
+            <ul aria-label="Accordion Control for e-resources">
+              <li><input type="checkbox" id="e-list" aria-expanded="false"><label for="e-list"> View all available e-resources for this title</label>
+                <ul>
+                  <li><a href="http://proxy.uchicago.edu/login?qurl=http%3A%2F%2Fgateway.ovid.com%2Fovidweb.cgi%3FT%3DJS%26PAGE%3Dtoc%26D%3Dovft%26MODE%3Dovid%26NEWS%3DN%26AN%3D00006056-000000000-00000" class="eLink external" target="_blank">Full text online</a> Online access via OVID:</li>
+                  <li><a href="http://proxy.uchicago.edu/login?url=http://search.ebscohost.com/direct.asp?db=a9h&amp;jn=NAE&amp;scope=site" title="getFullTxt" class="eLink external clickEventBound" target="_blank">Academic Search Complete</a> Available from 1997  until 2015</li>
+                  <li><a href="http://proxy.uchicago.edu/login?url=http://www.biodiversitylibrary.org//bibliography/40302" title="getFullTxt" class="eLink external clickEventBound" target="_blank">Biodiversity Heritage Library</a> Available from 1869  until 1923</li>
+                  <li><a href="http://proxy.uchicago.edu/login?url=http://digital.library.wisc.edu/1711.dl/HISTSCITECH.NATURE" title="getFullTxt" class="eLink external clickEventBound" target="_blank">Free E- Journals</a> Available from 1869 volume: 1 issue: 1  until 1875 volume: 12 issue: 313</li>
+                  <li><a href="http://proxy.uchicago.edu/login?url=http://gateway.ovid.com/ovidweb.cgi?AN=00006056-000000000-00000&amp;checkipval=yes&amp;T=JS&amp;NEWS=N&amp;D=ovft&amp;PAGE=toc&amp;MODE=ovid" title="getFullTxt" class="eLink external clickEventBound" target="_blank">Journals@Ovid</a> Available from 2001 volume: 413 issue: 6855  until 2010 volume: 468 issue: 7327</li>
+                </ul>
+              </li> 
+            </ul>
+          </div>
         </div>
+      </div>
 
       <div class="holdings-locpanel">
       <div class="locpanel-heading"><h2>In the Library</h2></div>
@@ -105,6 +115,7 @@
 
     </div><!-- /.container -->
 
+<div class="push"></div>
 <!-- Footer -->
   <footer class="container-fluid footer" id="footer">
     <div class="container">

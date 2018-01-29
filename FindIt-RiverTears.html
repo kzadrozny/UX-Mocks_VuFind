@@ -68,7 +68,7 @@
       <div class="locpanel-heading online"><h2>Online</h2></div>
 
         <div id="e-links" class="holdings-unit">
-           <p>Not available as an e-resource.</p>
+          <div class="alert alert-no-match" role="alert">Not available.</div>
         </div>
 
       </div>
@@ -76,32 +76,31 @@
       <div class="holdings-locpanel">
       <div class="locpanel-heading"><h2>In the Library</h2></div>
       <div id="e-links" class="holdings-unit">
-      <table class="holdings-table table">
-      <tbody>
+     <div class="alert alert-success-match" role="alert">There is a match for this <strong>ISBN</strong> in the Library Catalog</div>
 
-      <tr vocab="http://schema.org/" typeof="Offer">
-        <th><a href="#">ML3487.B7 D468 2009</a></th>
-        <td>Regenstein, Bookstacks</td>
-        <td><span class="text-danger">Not Available<link property="availability" href="http://schema.org/InStock"></span></td>
-        <td><!-- <a href="https://requests.lib.uchicago.edu/illiad/illiad.dll?Action=10&Form=30&sid=ScanDelver&genre=docdel&barcode=61095441&volume=c.1+&callno=PR6039.O32+H6+2002&loc=Regenstein%2C+Bookstacks&bib=4740289&title=The++annotated+hobbit&date=2002&issn=0618134700" class="service external"><i class="fa fa-fw fa-file-text-o" aria-hidden="true"></i> Scan and Deliver</a> --></td>
-      </tr>
-      </tbody>
-      </table>
-      <p><a href="https://catalog.lib.uchicago.edu/vufind/Record/126957" class="service" target="_blank">Search the Library Catalog for works with this title <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+      <div class="row in-library">
+        <div class="result-title"><a href="http://pi.lib.uchicago.edu/1001/cat/bib/7887999"><span class="title">River of tears : country music ... </span> ML3487.B7 D468 2009 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+        <span class="text-danger">Not Available</span><span class="location">Regenstein, Bookstacks</span>
       </div>
+
+      <div class="row">
+        <span class="view-all">OR <a href="https://catalog.lib.uchicago.edu/vufind/Search/Results?lookfor=Nature&type=Title" target="_blank">Search the Library Catalog</a> for works with <strong>this title</strong></span>
+      </div>
+      </div>
+
       </div>
 
 
       <div class="holdings-locpanel">
       <div class="locpanel-heading getit"><h2>Other Libraries</h2></div>
       <div id="e-links" class="holdings-unit">
-      <a href="https://requests.lib.uchicago.edu/illiad/illiad.dll?Action=10&Form=30&sid=FirstSearch%3AWorldCat%20(via%20SFX)&date=1964&rfe_dat=%3Caccessionnumber%3E3250008%3C%2Faccessionnumber%3E&authors=%3Caccession%20number%3E3250008%3C%2Faccession%20number%3E%3Cfssessid%3Efsapp1-38451-iz7ituj1-tlqlvw%3C%2Ffssessid%3E&aulast=L%C3%A9vi%20Strauss&genre=book&title=Mythologiques.&aufirst=Claude" class="text-getit service" target="_blank"><i class="fa fa-fw fa-flag" aria-hidden="true"></i> Request from another library</a>
+      <a href="https://requests.lib.uchicago.edu/illiad/illiad.dll?Action=10&Form=30&sid=lib.uchicago.edu%3Agenerator%20(via%20SFX)&issn=0028-0836&genre=article&title=Nature" class="text-getit service" target="_blank"><i class="fa fa-university" aria-hidden="true"></i> Request via Interlibrary Loan</a>
  
         </div>
       </div>
 
     </div><!-- /.container -->
-
+<div class="push"></div>
 <!-- Footer -->
   <footer class="container-fluid footer" id="footer">
     <div class="container">

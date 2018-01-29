@@ -65,7 +65,7 @@
         display: none;
     }
     body {
-        overflow: visible !important; 
+        overflow: visible !important;
     }
     div.container, div.container-fluid {
         margin: none;
@@ -103,9 +103,24 @@ $accent: #670000;
 body {
   padding-top: 50px;
   font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  position: relative;
+  margin: 0;
+  padding-bottom: 4em;
+  min-height: 100%;
   @include respond-to(small) {
-  padding-top: 100px;
+    padding-top: 100px;
   }
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 
@@ -183,6 +198,8 @@ body {
 .findit-wrap {
   padding-top: 2em!important;
   padding-bottom: 3em!important;
+  min-height: 100%;
+  margin-bottom: -50em;
   .text-success, .text-danger, .text-unknown {
     display: unset;
     font-size: 1em;
@@ -257,18 +274,14 @@ body {
     color: #767676;
     & a {
     color: #767676;
-      text-decoration: underline;
+    text-decoration: underline;
     }
   }
 }
 
 .holdings-table {
   margin-bottom: 10px;
-  //border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  //   tr:hover {
-  //   background-color: #f5f6f0!important;
-  // }
 }
 
 .holdings-unit {
@@ -276,8 +289,12 @@ body {
   p {
     padding-top: 10px;
   }
-  .result-title {
+  .result-title.title {
     font-size: 1.15em;
+    width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
     .title {
       padding-right: 1em;
     }
@@ -296,9 +313,6 @@ body {
     &.in-library {
       padding-left: 1em;
     }
-    // &:hover {
-    //   background-color: #f5f6f0;
-    // }
   }
 }
 
@@ -323,6 +337,59 @@ a.getit {
   font-size: 1.2em;
   margin-top: 0.5em;
 }
+
+.e-list-wrapper {
+  font-size: 0.9em;
+  color: #767676;
+  & a {
+    text-decoration: underline;
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & > li > ul {
+      padding-left: 1em;
+    }
+  }
+  label {
+    font-weight: 200;
+    display: block;
+    padding-top: 0.5em;
+    border-bottom: none;
+    cursor: pointer;
+    &:hover {
+      color: #acacac;
+    }
+  }
+  // This 'input' section can't be nested for optimal functionality
+  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  input[type="checkbox"] ~ ul{
+    height: 0;
+    transform: scaleY(0);
+  }
+  input[type="checkbox"]:checked ~ ul{
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1);
+  }
+  input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    font-size: 0.9em;
+    color: #acacac;
+    content: "\f067";
+  }
+  input[type=checkbox]:checked + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f00d";
+  }
+}
+
 
 
 /*
@@ -382,10 +449,13 @@ fieldset {
  * --------------------------------------------------
  */
 
+ .push {
+  height: 50em;
+ }
+
 .footer {
   width: 100%;
   background: $main;
-  background-repeat: repeat;
   padding-top: 20px;
   padding-bottom: 20px;
   position: absolute;

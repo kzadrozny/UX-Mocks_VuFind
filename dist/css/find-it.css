@@ -42,10 +42,23 @@
  */
 body {
   padding-top: 50px;
-  font-family: 'ProximaNova-Regular', "Arial", sans-serif; }
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  position: relative;
+  margin: 0;
+  padding-bottom: 4em;
+  min-height: 100%; }
   @media (min-width: 48em) {
     body {
       padding-top: 100px; } }
+
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
 /*
  * Main Navbar
@@ -105,7 +118,9 @@ body {
  */
 .findit-wrap {
   padding-top: 2em !important;
-  padding-bottom: 3em !important; }
+  padding-bottom: 3em !important;
+  min-height: 100%;
+  margin-bottom: -50em; }
   .findit-wrap .text-success, .findit-wrap .text-danger, .findit-wrap .text-unknown {
     display: unset;
     font-size: 1em; }
@@ -173,9 +188,13 @@ body {
   padding-top: 0.75em; }
   .holdings-unit p {
     padding-top: 10px; }
-  .holdings-unit .result-title {
-    font-size: 1.15em; }
-    .holdings-unit .result-title .title {
+  .holdings-unit .result-title.title {
+    font-size: 1.15em;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .holdings-unit .result-title.title .title {
       padding-right: 1em; }
   .findit-wrap .holdings-unit {
     margin: 1em 1em 0 1em;
@@ -205,6 +224,46 @@ body {
 a.getit {
   font-size: 1.2em;
   margin-top: 0.5em; }
+
+.e-list-wrapper {
+  font-size: 0.9em;
+  color: #767676; }
+  .e-list-wrapper a {
+    text-decoration: underline; }
+  .e-list-wrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .e-list-wrapper ul > li > ul {
+      padding-left: 1em; }
+  .e-list-wrapper label {
+    font-weight: 200;
+    display: block;
+    padding-top: 0.5em;
+    border-bottom: none;
+    cursor: pointer; }
+    .e-list-wrapper label:hover {
+      color: #acacac; }
+  .e-list-wrapper input[type="checkbox"] {
+    position: absolute;
+    left: -9999px; }
+  .e-list-wrapper input[type="checkbox"] ~ ul {
+    height: 0;
+    transform: scaleY(0); }
+  .e-list-wrapper input[type="checkbox"]:checked ~ ul {
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1); }
+  .e-list-wrapper input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    font-size: 0.9em;
+    color: #acacac;
+    content: "\f067"; }
+  .e-list-wrapper input[type=checkbox]:checked + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f00d"; }
 
 /*
  * ILL Request Page
@@ -251,10 +310,12 @@ fieldset {
  * Footer
  * --------------------------------------------------
  */
+.push {
+  height: 50em; }
+
 .footer {
   width: 100%;
   background: #800000;
-  background-repeat: repeat;
   padding-top: 20px;
   padding-bottom: 20px;
   position: absolute;
