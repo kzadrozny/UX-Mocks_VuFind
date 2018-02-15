@@ -257,13 +257,12 @@ a.getit {
     transform: scaleY(1); }
   .e-list-wrapper input[type=checkbox] + label:before {
     font-family: FontAwesome;
-    font-size: 0.9em;
     color: #acacac;
-    content: "\f067"; }
+    content: "\f107"; }
   .e-list-wrapper input[type=checkbox]:checked + label:before {
     font-family: FontAwesome;
     color: #acacac;
-    content: "\f00d"; }
+    content: "\f106"; }
 
 /*
  * ILL Request Page
