@@ -117,15 +117,21 @@ html {
  * --------------------------------------------------
  */
 .findit-wrap {
-  padding-top: 2em !important;
+  padding-top: 0.5em !important;
   padding-bottom: 3em !important;
   min-height: 100%;
   margin-bottom: -50em; }
+  .findit-wrap h1 {
+    font-size: 1.15em; }
+  .findit-wrap h2 {
+    font-size: 1em; }
+  .findit-wrap .citation p {
+    font-size: 0.9em; }
   .findit-wrap .text-success, .findit-wrap .text-danger, .findit-wrap .text-unknown {
     display: unset;
     font-size: 1em; }
   .findit-wrap .alert {
-    padding: 7px;
+    padding: 5px 0 0;
     margin: -1em 0 1em -1em; }
     .findit-wrap .alert.alert-success-match {
       color: #3c763d; }
@@ -158,10 +164,6 @@ html {
     .findit-wrap .fi-header h1 {
       color: #670000;
       display: inline; }
-  .findit-wrap .citation {
-    padding: 0 0 1em 0.5em; }
-    .findit-wrap .citation p {
-      font-size: 1.2em; }
   .findit-wrap .holdings-locpanel {
     max-width: 60em; }
     .findit-wrap .holdings-locpanel .location {
@@ -169,7 +171,7 @@ html {
     .findit-wrap .holdings-locpanel .catalog-record {
       padding-right: 2em; }
   .findit-wrap .locpanel-heading {
-    padding: 0.75em 0 0.5em 1em; }
+    padding: 0.5em 0 0.5em 1em; }
     .findit-wrap .locpanel-heading h2 {
       display: inline; }
   .findit-wrap .view-all {
@@ -185,7 +187,8 @@ html {
   border-bottom: 1px solid #eee; }
 
 .holdings-unit {
-  padding-top: 0.75em; }
+  padding-top: 0.5em;
+  padding-bottom: 0.25em; }
   .holdings-unit p {
     padding-top: 10px; }
   .holdings-unit .result-title.title {
@@ -212,7 +215,7 @@ html {
   background-color: #f4e6d0; }
 
 .text-getit {
-  padding: 0.75em 0 1em 0;
+  padding: 0 0 1em 0;
   display: block; }
 
 .table > tbody > tr > th {
@@ -263,6 +266,12 @@ a.getit {
     font-family: FontAwesome;
     color: #acacac;
     content: "\f106"; }
+
+p.note {
+  font-size: 0.9em;
+  color: #767676;
+  padding-top: 0;
+  padding-bottom: 0.5em; }
 
 /*
  * ILL Request Page

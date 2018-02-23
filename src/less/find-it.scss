@@ -196,16 +196,25 @@ html {
 
 
 .findit-wrap {
-  padding-top: 2em!important;
+  padding-top: 0.5em!important;
   padding-bottom: 3em!important;
   min-height: 100%;
   margin-bottom: -50em;
+  h1 {
+    font-size: 1.15em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .citation p {
+    font-size: 0.9em;
+  }
   .text-success, .text-danger, .text-unknown {
     display: unset;
     font-size: 1em;
   }
   .alert {
-    padding: 7px;
+    padding: 5px 0 0;
     margin: -1em 0 1em -1em;
     &.alert-success-match {
       color: #3c763d;
@@ -247,12 +256,6 @@ html {
       display: inline;
     }
   }
-  .citation {
-    padding: 0 0 1em 0.5em;
-    p {
-      font-size: 1.2em;
-    }
-  }
   .holdings-locpanel {
     max-width: 60em;
     .location {
@@ -263,7 +266,7 @@ html {
     }
   }
   .locpanel-heading {
-    padding: 0.75em 0 0.5em 1em;
+    padding: 0.5em 0 0.5em 1em;
     h2 {
       display: inline;
     }
@@ -285,16 +288,17 @@ html {
 }
 
 .holdings-unit {
-  padding-top: 0.75em;
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
   p {
     padding-top: 10px;
   }
   .result-title.title {
     font-size: 1.15em;
     width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     .title {
       padding-right: 1em;
     }
@@ -321,7 +325,7 @@ html {
 }
 
 .text-getit {
-  padding: 0.75em 0 1em 0;
+  padding: 0 0 1em 0;
   display: block;
 }
 
@@ -387,6 +391,13 @@ a.getit {
     color: #acacac;
     content: "\f106";
   }
+}
+
+p.note {
+  font-size: 0.9em;
+  color: #767676;
+  padding-top: 0;
+  padding-bottom: 0.5em;
 }
 
 
