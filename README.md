@@ -1,18 +1,11 @@
-# VuFind Design Updates
+# VuFind and other Catalog Design Updates for University of Chicago Libraries
 
-For the Catalog upgrade. (Used to host mock-ups for UX testing or stakeholder approval before dev production.)
+## Live Mocks for Production
+Live mocks can be viewed at [kzadrozny.github.io/VuFind/](https://kzadrozny.github.io/VuFind/)
 
-![](http://www.reactiongifs.us/wp-content/uploads/2016/09/state_the_obvious_futurama.gif)
+## Design Results
+### Before
+![](https://dl.boxcloud.com/api/2.0/internal_files/279403987834/versions/293944674970/representations/png_paged_2048x2048/content/1.png?access_token=1!l2Cl3CKozZTrV0hPZPYoJ_wtsTmQsaSsYBqhEtNd9D-5MZdXTVI0hvGQbolgjnhPjUb2bfck2ezvMJn8BksySkRkAcaqKLpHxv8oeTJCbD20XE2-FX4ENs_mja4zyc_4TzzZwT9ENpV5NGHI9uDkwPKbOSqVvTkN3xnr8aBs2oayYQcrDcuGOP1egxNIXs5AvdmNad7917yKa-HJgbz48LLR9dfjLsDJIHdgMc5WS5tmCp-3PaB0suAKQA2w-ZjF-6vWBGYgvK5Oym-mg7Ps0VuVK8_cLRgEBlZ9RaYa4i5eY0BAHLyll0IqPWpkwEofK6YQAz7MhILZQ2KVeW0RV8kJ7Ocm3Ucsx71ckpggOM7YtLGxN3mMRbaS0GCZD3JcxAGziM5UjUKchYhs&box_client_name=box-content-preview&box_client_version=1.28.1)
 
-## Production Ready Files
-### Mark-Up
-* vufind-fines.html
-* vufind-mansueto.html
-* vufind-myaccount.html
-* vufind-requested.html
-
-### Styles
-* Sass: /src/scss/myacct.scss
-* If need to convert to LESS, try using [csspre.com](http://csspre.com/convert/) or similar
-* If all else fails, the compiled CSS is here: /dist/css/myacct.css
-
+### After
+![](https://dl.boxcloud.com/api/2.0/internal_files/279402383920/versions/293943068896/representations/png_paged_2048x2048/content/1.png?access_token=1!XpaOfizkCLcMkHTooqqe9ynrlUibKh495ZpHRIDC1AE96GXBy2V8wd28NgV9VOgrhP-PJsq1-3JB0H0bs38isR08ZSySGKIFk20-_1LnFFRyCjBMzfhvCnnpXjYDwG0SCUNokp6W-MToF5T4Jzfzp2fKbcsn0fHUailxVAqJdvrG8IGtjkGsDiamK5otQaoryZrTjMegQMgydd7Z4MuzagU-thzUAI7aQ0KwfwVyHcSVdGjgxXhMTC-9m4A6nyXIXuVQHeyss1Vxzwpcwy-OFDsgkZk59udqfxfD6fCF3bbJcXZIAVWPbgTlwAc-T1FvbulvaGhdck7NsIlAhKMWVuFOH8gbXelbb8aiuVtSpzztkvS5RSbJALH_1rCg-TbW6WT058zoaXiKMuOK&box_client_name=box-content-preview&box_client_version=1.28.1)
