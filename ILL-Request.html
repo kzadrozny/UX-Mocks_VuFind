@@ -66,9 +66,7 @@
       <p><strong>Author/Editors:</strong> <br/>
       <strong>Date of Publication:</strong> 2008</p>
       <legend>Request Preferences</legend>
-      <label for="volume"><strong>If this is a multi-volume work, please indicate the volumes needed:</strong></label>
-      <input maxlength="40" name="volume" type="text">
-      <label for="Pick-upLocation"><strong>Please choose your preferred pickup location:</strong></label>
+      <label for="Pick-upLocation"><strong>Choose your pick-up location:</strong></label>
         <select id="Pick-upLocation" name="Pick-upLocation" name="select">
           <option value="JRLMAIN" selected="">Regenstein Library</option>
           <option value="CRERAR">Crerar Library</option>
@@ -76,14 +74,18 @@
           <option value="SSAd">Social Service Administration Library</option>
           <option value="ECKHART">Eckhart Library</option>
         </select>
+
+      <label for="volume"><strong>Volumes needed, if applicable:</strong></label>
+      <input maxlength="40" name="volume" type="text">
+
         <label for="Notes"><strong>Notes</strong></label>
         <input id="notes" name="Notes" type="text">
-        <span class="fineprint"><br/>(Information that may help us find the item, as well as any other pertinent information.)</span>
+        <br/><small id="NotesHelp">(Information that may help us find the item, as well as any other pertinent information.)</small>
 
     <input type="submit" name="submit" value="Submit Request">
     </fieldset>
   </div>
-  <p>You will receive and email shortly with a time estimate of when these item(s) will be delivered</p>
+  <p>You will receive an email shortly with a time estimate of when these item(s) will be delivered</p>
     <p class="fineprint">
         <i aria-hidden="true" class="fa fa-info-circle"></i> Your request is searched in 
         <a href="http://www.lib.uchicago.edu/h/ub" data-ga-category="search-widget" data-ga-action="click" data-ga-label="Catalogs > UBorrow" data-ga-tracked="on">UBorrow</a>, <a href="http://www.lib.uchicago.edu/h/borrowdirect" data-ga-category="search-widget" data-ga-action="click" data-ga-label="Catalogs > BorrowDirect" data-ga-tracked="on">BorrowDirect</a>, and 
