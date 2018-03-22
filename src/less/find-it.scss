@@ -226,6 +226,16 @@ html {
         margin-right: 0.5em;
       }
     }
+    &.alert-unknown {
+      color: #767676;
+      &:before {
+        font-family: FontAwesome;
+        color: #f4e6d0;
+        display: inline-block;
+        content: "\f069";
+        margin-right: 0.5em;
+      }
+    }
     &.alert-no-match {
       color: #767676;
       &:before {
