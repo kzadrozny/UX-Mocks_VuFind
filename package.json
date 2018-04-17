@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kzadrozny/VuFind.git"
+    "url": "git+https://github.com/uchicago-library/UX-Mocks_VuFind.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kzadrozny/VuFind/issues"
+    "url": "https://github.com/uchicago-library/UX-Mocks_VuFind/issues"
   },
-  "homepage": "https://github.com/kzadrozny/VuFind#readme",
+  "homepage": "https://github.com/uchicago-library/UX-Mocks_VuFind#readme",
   "devDependencies": {
     "browser-sync": "^2.15.0",
     "gulp": "^3.9.1",

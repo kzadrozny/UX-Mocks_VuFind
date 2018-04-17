@@ -1,0 +1,32 @@
+table {
+  background: #fff;
+  width: 80%;
+  font-size: 16px;
+  line-height: 25px; }
+  table.Block {
+    background: #fff;
+    width: 100%; }
+    table.Block td {
+      font-size: 1em;
+      text-align: left;
+      vertical-align: text-top; }
+      table.Block td:first-child {
+        width: 20%;
+        padding-right: 3em; }
+
+a:link {
+  color: #337ab7; }
+  a:link.ABC {
+    font-size: inherit; }
+
+#__records_per_page {
+  font-size: inherit; }
+
+h2.exlHeadingTextDisplay {
+  white-space: pre; }
+  h2.exlHeadingTextDisplay a {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px; }
+
+/*# sourceMappingURL=sfxd.css.map */

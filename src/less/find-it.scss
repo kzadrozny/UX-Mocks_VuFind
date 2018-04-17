@@ -1,0 +1,485 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+
+@mixin respond-to($breakpoint) {
+  // Extra small devices (phones, 544px and up)
+  @if $breakpoint == "xsmall" {
+    @media (min-width: 34em) {
+      @content;
+    }
+  }
+
+  // Small devices (landscape phones, 768px and up)
+  @else if $breakpoint == "small" {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+  // Medium devices (crappy laptops, tablets, 992px and up)
+  @else if $breakpoint == "medium" {
+    @media (min-width: 62em) {
+      @content;
+    }
+  }
+  // Large devices (desktops, 1200px and up)
+  @else if $breakpoint == "large" {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+
+  //Extra large devices (large desktops, 1900px and up)
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 118em) {
+      @content;
+    }
+  }
+  
+  // Short-cut to target extra small devices *only* (phones, 544px and up)
+  @else if $breakpoint == "smallonly" {
+    @media (max-width: 34em) {
+      @content;
+    }
+  }
+}
+
+
+@media print {
+    @page {
+        size: 330mm 427mm;
+        margin: 1cm;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+    .container {
+        width: 1170px;
+    }
+    .navbar, #footer {
+        display: none;
+    }
+    body {
+        overflow: visible !important;
+    }
+    div.container, div.container-fluid {
+        margin: none;
+        padding: none;
+    }
+    div.row, div.row-fluid {
+        margin: none;
+        padding: none;
+    }
+    h2, h3, h4, h5, h6 {
+       page-break-after: avoid;
+    }
+    /*img {
+       max-width: 100% !important;
+    }*/
+    ul, img {
+       page-break-inside: avoid;
+    }
+}
+
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+
+$main: #800000;
+$accent: #670000;
+
+
+/*
+ * Global
+ * --------------------------------------------------
+ */
+
+body {
+  padding-top: 50px;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  position: relative;
+  margin: 0;
+  padding-bottom: 4em;
+  min-height: 100%;
+  @include respond-to(small) {
+    padding-top: 100px;
+  }
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+
+.fluid-top {
+  @include respond-to(small) {
+    padding: 0px;
+  }
+}
+
+.navbar-brand {
+  max-width: 250px;
+  padding: 5px 15px 25px 15px;
+  @include respond-to(small) {
+    max-width: 275px;
+    padding-top: 15px;
+  }
+  @include respond-to(medium) {
+    max-width: 350px;
+    padding: 7px 15px 25px 35px;
+  }
+}
+
+.navbar>.container-fluid .navbar-brand {
+  @include respond-to(medium) {
+    margin-left: 15px;
+  }
+}
+
+.navbar-default {
+  border: 0px;
+  background-repeat: repeat;
+  background-color: $main;
+  z-index: 10;
+  border-radius: 0;
+}
+
+#navbar {
+  background-color: $accent;
+  font-size: 1.1em;
+  padding-left:0.5em;
+  @include respond-to(small) {
+    margin-top: 60px;
+  }
+  .navbar-nav {
+    float: left;
+    @include respond-to(small) {
+      float: right;
+    }
+    &>li>a {
+      color: #eee;
+      padding: 10px;
+      &:hover {
+        color: #fff;
+        background-color: #642822;
+      }
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+/*
+ * Find It! Content
+ * --------------------------------------------------
+ */
+
+
+.findit-wrap {
+  padding-top: 0.5em!important;
+  padding-bottom: 3em!important;
+  min-height: 100%;
+  margin-bottom: -50em;
+  h1 {
+    font-size: 1.15em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  .citation p {
+    font-size: 0.9em;
+  }
+  .text-success, .text-danger, .text-unknown {
+    display: unset;
+    font-size: 1em;
+  }
+  .alert {
+    padding: 5px 0 0;
+    margin: -1em 0 1em -1em;
+    &.alert-success-match {
+      color: #3c763d;
+      &:before {
+        font-family: FontAwesome;
+        color: #b1c8b1;
+        display: inline-block;
+        content: "\f00c";
+        margin-right: 0.5em;
+      }
+    }
+    &.alert-unknown {
+      color: #767676;
+      &:before {
+        font-family: FontAwesome;
+        color: #f4e6d0;
+        display: inline-block;
+        content: "\f069";
+        margin-right: 0.5em;
+      }
+    }
+    &.alert-no-match {
+      color: #767676;
+      &:before {
+        font-family: FontAwesome;
+        color: #D6D6CE;
+        display: inline-block;
+        content: "\f05e";
+        margin-right: 0.5em;
+      }
+    }
+    .resubmit-search {
+      font-size: 1.15em;
+      padding-top: 1em;
+      &:after {
+        font-family: FontAwesome;
+        color: #437e9b;
+        display: inline-block;
+        content: "\f0a9";
+      }
+    }
+  }
+  .fi-header {
+    padding: 1em 1em 0.5em;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    h1 {
+      color: $accent;
+      display: inline;
+    }
+  }
+  .holdings-locpanel {
+    max-width: 60em;
+    .location {
+      padding: 0 2em;
+    }
+    .catalog-record {
+      padding-right: 2em;
+    }
+  }
+  .locpanel-heading {
+    padding: 0.5em 0 0.5em 1em;
+    h2 {
+      display: inline;
+    }
+  }
+  .view-all {
+    float: right;
+    font-size: 0.9em;
+    color: #767676;
+    & a {
+    color: #767676;
+    text-decoration: underline;
+    }
+  }
+}
+
+.holdings-table {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.holdings-unit {
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+  p {
+    padding-top: 10px;
+  }
+  .result-title.title {
+    font-size: 1.15em;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .title {
+      padding-right: 1em;
+    }
+  }
+  .findit-wrap & {
+    margin: 1em 1em 0 1em;
+    border-top: none;
+  }
+  .row {
+    padding-left: 1em;
+      padding-bottom: 0.5em;
+    &+.row {
+      padding-top: 0.5em;
+      border-top: 1px solid #eee;
+    }
+    &.in-library {
+      padding-left: 1em;
+    }
+  }
+}
+
+.locpanel-heading.getit {
+  background-color: #f4e6d0;
+}
+
+.text-getit {
+  padding: 0 0 1em 0;
+  display: block;
+}
+
+.table > tbody > tr > th {
+  border-top: none;
+}
+
+.light-link {
+  font-weight: 400;
+}
+
+a.getit {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.e-list-wrapper {
+  font-size: 0.9em;
+  color: #767676;
+  & a {
+    text-decoration: underline;
+  }
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    & > li > ul {
+      padding-left: 1em;
+    }
+  }
+  label {
+    font-weight: 200;
+    display: block;
+    padding-top: 0.5em;
+    border-bottom: none;
+    cursor: pointer;
+    &:hover {
+      color: #acacac;
+    }
+  }
+  // This 'input' section can't be nested for optimal functionality
+  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+  input[type="checkbox"] ~ ul{
+    height: 0;
+    transform: scaleY(0);
+  }
+  input[type="checkbox"]:checked ~ ul{
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1);
+  }
+  input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f107";
+  }
+  input[type=checkbox]:checked + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f106";
+  }
+}
+
+p.note {
+  font-size: 0.9em;
+  color: #767676;
+  padding-top: 0;
+  padding-bottom: 0.5em;
+}
+
+
+
+/*
+ * ILL Request Page
+ * --------------------------------------------------
+ */
+
+fieldset {
+  padding: 1em 2em;
+    h2 {
+      font-size:1.65em;
+  }
+  legend {
+    font-size: 1em;
+    color: $accent;
+    padding-top: 1.3em;
+    margin-bottom: 5px;
+    & + h2 {
+      margin-top: 0;
+    }
+  }
+  label {
+    padding-top: 0.75em;
+    display: block;
+  }
+  input[type="submit"] {
+    margin: 1.5em 0 0.75em;
+    display: block;
+    background-color: $accent;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    line-height: 0.45em;
+    border: none;
+    &:hover {
+      color: #000;
+      background-color: #c89d9a;
+    }
+  }
+  input#notes {
+    width: 30em;
+  } 
+}
+
+.fineprint {
+  font-size: 0.85em;
+}
+
+.locpanel-heading h1 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0;
+}
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+
+ .push {
+  height: 50em;
+ }
+
+.footer {
+  width: 100%;
+  background: $main;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+

@@ -1,0 +1,340 @@
+/*
+ * Media Queries
+ * --------------------------------------------------
+ *
+ * Use as: @include respond-to(small) { ... }
+ *    @include respond-to(medium) { ... }
+ *    @include respond-to(large) { ... }
+ */
+@media print {
+  @page {
+    size: 330mm 427mm;
+    margin: 1cm; }
+  a[href]:after {
+    content: none !important; }
+  .container {
+    width: 1170px; }
+  .navbar, #footer {
+    display: none; }
+  body {
+    overflow: visible !important; }
+  div.container, div.container-fluid {
+    margin: none;
+    padding: none; }
+  div.row, div.row-fluid {
+    margin: none;
+    padding: none; }
+  h2, h3, h4, h5, h6 {
+    page-break-after: avoid; }
+  /*img {
+       max-width: 100% !important;
+    }*/
+  ul, img {
+    page-break-inside: avoid; } }
+
+/*
+ * Colors
+ * --------------------------------------------------
+ */
+/*
+ * Global
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 50px;
+  font-family: 'ProximaNova-Regular', "Arial", sans-serif;
+  position: relative;
+  margin: 0;
+  padding-bottom: 4em;
+  min-height: 100%; }
+  @media (min-width: 48em) {
+    body {
+      padding-top: 100px; } }
+
+html {
+  height: 100%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/*
+ * Main Navbar
+ * --------------------------------------------------
+ */
+@media (min-width: 48em) {
+  .fluid-top {
+    padding: 0px; } }
+
+.navbar-brand {
+  max-width: 250px;
+  padding: 5px 15px 25px 15px; }
+  @media (min-width: 48em) {
+    .navbar-brand {
+      max-width: 275px;
+      padding-top: 15px; } }
+  @media (min-width: 62em) {
+    .navbar-brand {
+      max-width: 350px;
+      padding: 7px 15px 25px 35px; } }
+
+@media (min-width: 62em) {
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 15px; } }
+
+.navbar-default {
+  border: 0px;
+  background-repeat: repeat;
+  background-color: #800000;
+  z-index: 10;
+  border-radius: 0; }
+
+#navbar {
+  background-color: #670000;
+  font-size: 1.1em;
+  padding-left: 0.5em; }
+  @media (min-width: 48em) {
+    #navbar {
+      margin-top: 60px; } }
+  #navbar .navbar-nav {
+    float: left; }
+    @media (min-width: 48em) {
+      #navbar .navbar-nav {
+        float: right; } }
+    #navbar .navbar-nav > li > a {
+      color: #eee;
+      padding: 10px; }
+      #navbar .navbar-nav > li > a:hover {
+        color: #fff;
+        background-color: #642822; }
+      #navbar .navbar-nav > li > a:focus {
+        color: #fff; }
+
+/*
+ * Find It! Content
+ * --------------------------------------------------
+ */
+.findit-wrap {
+  padding-top: 0.5em !important;
+  padding-bottom: 3em !important;
+  min-height: 100%;
+  margin-bottom: -50em; }
+  .findit-wrap h1 {
+    font-size: 1.15em; }
+  .findit-wrap h2 {
+    font-size: 1em; }
+  .findit-wrap .citation p {
+    font-size: 0.9em; }
+  .findit-wrap .text-success, .findit-wrap .text-danger, .findit-wrap .text-unknown {
+    display: unset;
+    font-size: 1em; }
+  .findit-wrap .alert {
+    padding: 5px 0 0;
+    margin: -1em 0 1em -1em; }
+    .findit-wrap .alert.alert-success-match {
+      color: #3c763d; }
+      .findit-wrap .alert.alert-success-match:before {
+        font-family: FontAwesome;
+        color: #b1c8b1;
+        display: inline-block;
+        content: "\f00c";
+        margin-right: 0.5em; }
+    .findit-wrap .alert.alert-unknown {
+      color: #767676; }
+      .findit-wrap .alert.alert-unknown:before {
+        font-family: FontAwesome;
+        color: #f4e6d0;
+        display: inline-block;
+        content: "\f069";
+        margin-right: 0.5em; }
+    .findit-wrap .alert.alert-no-match {
+      color: #767676; }
+      .findit-wrap .alert.alert-no-match:before {
+        font-family: FontAwesome;
+        color: #D6D6CE;
+        display: inline-block;
+        content: "\f05e";
+        margin-right: 0.5em; }
+    .findit-wrap .alert .resubmit-search {
+      font-size: 1.15em;
+      padding-top: 1em; }
+      .findit-wrap .alert .resubmit-search:after {
+        font-family: FontAwesome;
+        color: #437e9b;
+        display: inline-block;
+        content: "\f0a9"; }
+  .findit-wrap .fi-header {
+    padding: 1em 1em 0.5em;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd; }
+    .findit-wrap .fi-header h1 {
+      color: #670000;
+      display: inline; }
+  .findit-wrap .holdings-locpanel {
+    max-width: 60em; }
+    .findit-wrap .holdings-locpanel .location {
+      padding: 0 2em; }
+    .findit-wrap .holdings-locpanel .catalog-record {
+      padding-right: 2em; }
+  .findit-wrap .locpanel-heading {
+    padding: 0.5em 0 0.5em 1em; }
+    .findit-wrap .locpanel-heading h2 {
+      display: inline; }
+  .findit-wrap .view-all {
+    float: right;
+    font-size: 0.9em;
+    color: #767676; }
+    .findit-wrap .view-all a {
+      color: #767676;
+      text-decoration: underline; }
+
+.holdings-table {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee; }
+
+.holdings-unit {
+  padding-top: 0.5em;
+  padding-bottom: 0.25em; }
+  .holdings-unit p {
+    padding-top: 10px; }
+  .holdings-unit .result-title.title {
+    font-size: 1.15em;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .holdings-unit .result-title.title .title {
+      padding-right: 1em; }
+  .findit-wrap .holdings-unit {
+    margin: 1em 1em 0 1em;
+    border-top: none; }
+  .holdings-unit .row {
+    padding-left: 1em;
+    padding-bottom: 0.5em; }
+    .holdings-unit .row + .row {
+      padding-top: 0.5em;
+      border-top: 1px solid #eee; }
+    .holdings-unit .row.in-library {
+      padding-left: 1em; }
+
+.locpanel-heading.getit {
+  background-color: #f4e6d0; }
+
+.text-getit {
+  padding: 0 0 1em 0;
+  display: block; }
+
+.table > tbody > tr > th {
+  border-top: none; }
+
+.light-link {
+  font-weight: 400; }
+
+a.getit {
+  font-size: 1.2em;
+  margin-top: 0.5em; }
+
+.e-list-wrapper {
+  font-size: 0.9em;
+  color: #767676; }
+  .e-list-wrapper a {
+    text-decoration: underline; }
+  .e-list-wrapper ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .e-list-wrapper ul > li > ul {
+      padding-left: 1em; }
+  .e-list-wrapper label {
+    font-weight: 200;
+    display: block;
+    padding-top: 0.5em;
+    border-bottom: none;
+    cursor: pointer; }
+    .e-list-wrapper label:hover {
+      color: #acacac; }
+  .e-list-wrapper input[type="checkbox"] {
+    position: absolute;
+    left: -9999px; }
+  .e-list-wrapper input[type="checkbox"] ~ ul {
+    height: 0;
+    transform: scaleY(0); }
+  .e-list-wrapper input[type="checkbox"]:checked ~ ul {
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1); }
+  .e-list-wrapper input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f107"; }
+  .e-list-wrapper input[type=checkbox]:checked + label:before {
+    font-family: FontAwesome;
+    color: #acacac;
+    content: "\f106"; }
+
+p.note {
+  font-size: 0.9em;
+  color: #767676;
+  padding-top: 0;
+  padding-bottom: 0.5em; }
+
+/*
+ * ILL Request Page
+ * --------------------------------------------------
+ */
+fieldset {
+  padding: 1em 2em; }
+  fieldset h2 {
+    font-size: 1.65em; }
+  fieldset legend {
+    font-size: 1em;
+    color: #670000;
+    padding-top: 1.3em;
+    margin-bottom: 5px; }
+    fieldset legend + h2 {
+      margin-top: 0; }
+  fieldset label {
+    padding-top: 0.75em;
+    display: block; }
+  fieldset input[type="submit"] {
+    margin: 1.5em 0 0.75em;
+    display: block;
+    background-color: #670000;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    line-height: 0.45em;
+    border: none; }
+    fieldset input[type="submit"]:hover {
+      color: #000;
+      background-color: #c89d9a; }
+  fieldset input#notes {
+    width: 30em; }
+
+.fineprint {
+  font-size: 0.85em; }
+
+.locpanel-heading h1 {
+  font-size: 17px;
+  line-height: 17px;
+  margin: 0.5em 0; }
+
+/*
+ * Footer
+ * --------------------------------------------------
+ */
+.push {
+  height: 50em; }
+
+.footer {
+  width: 100%;
+  background: #800000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0; }
+
+/*# sourceMappingURL=find-it.css.map */
