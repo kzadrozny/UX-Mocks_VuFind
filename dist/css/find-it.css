@@ -141,6 +141,14 @@ html {
         display: inline-block;
         content: "\f00c";
         margin-right: 0.5em; }
+    .findit-wrap .alert.alert-unknown {
+      color: #767676; }
+      .findit-wrap .alert.alert-unknown:before {
+        font-family: FontAwesome;
+        color: #f4e6d0;
+        display: inline-block;
+        content: "\f069";
+        margin-right: 0.5em; }
     .findit-wrap .alert.alert-no-match {
       color: #767676; }
       .findit-wrap .alert.alert-no-match:before {
