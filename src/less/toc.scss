@@ -1,0 +1,25 @@
+.toc-tab ul {
+    padding-left: 0;
+    list-style: none;
+    //line-height: 2em;
+		li {
+			margin-bottom: 0.75em;
+	    	ul li {
+	    		padding-left: 1.25em;
+	    	}
+		}
+	.toc-page {
+		//padding-left: 3em;
+		&:before {
+			content: " . . . . ."
+		}
+	}
+	.toc-author {
+		display: block;
+		padding-left: 1em;
+		margin-bottom: .5em;
+		&:before {
+			content: "Author(s): "
+		}
+	}
+}
