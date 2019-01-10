@@ -1,0 +1,17 @@
+.toc-tab ul {
+  padding-left: 0;
+  list-style: none; }
+  .toc-tab ul li {
+    margin-bottom: 0.75em; }
+    .toc-tab ul li ul li {
+      padding-left: 1.25em; }
+  .toc-tab ul .toc-page:before {
+    content: " . . . . ."; }
+  .toc-tab ul .toc-author {
+    display: block;
+    padding-left: 1em;
+    margin-bottom: .5em; }
+    .toc-tab ul .toc-author:before {
+      content: "Author(s): "; }
+
+/*# sourceMappingURL=toc.css.map */
