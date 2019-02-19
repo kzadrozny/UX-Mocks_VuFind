@@ -4,7 +4,12 @@
   .toc-tab ul li {
     margin-bottom: 0.75em; }
     .toc-tab ul li ul li {
-      padding-left: 1.25em; }
+      padding-left: 1.25em;
+      list-style: inside; }
+      .toc-tab ul li ul li:first-child {
+        margin-top: 0.75em; }
+      .toc-tab ul li ul li:last-child {
+        margin-bottom: 1.75em; }
   .toc-tab ul .toc-page:before {
     content: " . . . . ."; }
   .toc-tab ul .toc-author {
